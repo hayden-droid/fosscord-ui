@@ -21,12 +21,12 @@
 	--BTN-red-active-background: #c03939;
 	--BTN-red-outline-active-background: rgb(240, 71, 71, 0.1);
 	//Green btn
-	--BTN-green-background: #43B581;
-	--BTN-green-border: #43B581;
+	--BTN-green-background: #43b581;
+	--BTN-green-border: #43b581;
 	--BTN-green-color: #ffffff;
-	--BTN-green-hover-background: #3CA374;
+	--BTN-green-hover-background: #3ca374;
 	--BTN-green-active-background: #35976b;
-	--BTN-green-outline-active-background: rgb(240, 71, 71, 0.1);
+	--BTN-green-outline-active-background: rgba(60, 163, 116, 0.1);
 	//Link btn
 	--BTN-link-background: transparent;
 	--BTN-link-border: transparent;
@@ -35,8 +35,6 @@
 	--BTN-focus-color: #00b0f4;
 	--BTN-focus-radius: 3px;
 }
-
-//TODO: Css Variables
 
 button {
 	border: 1px solid var(--BTN-primary-background);
