@@ -2,7 +2,7 @@
 This will be an unoffical css framework in the style of Discord.
 
 ## Features
-White & Dark Mode
+Light & Dark Mode
 
 ## Components
 * Page 
