@@ -18,7 +18,7 @@ Light & Dark Mode
   * Channels (Voice, Text, Category, News)
   * Roles
   
-* Button
+* [Button](https://discord-open-source.github.io/discord-css/test/button.html)
    * Text
    * Icon
    * Disabled

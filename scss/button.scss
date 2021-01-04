@@ -20,6 +20,13 @@
 	--BTN-red-hover-background: #d84040;
 	--BTN-red-active-background: #c03939;
 	--BTN-red-outline-active-background: rgb(240, 71, 71, 0.1);
+	//Green btn
+	--BTN-green-background: #43B581;
+	--BTN-green-border: #43B581;
+	--BTN-green-color: #ffffff;
+	--BTN-green-hover-background: #3CA374;
+	--BTN-green-active-background: #35976b;
+	--BTN-green-outline-active-background: rgb(240, 71, 71, 0.1);
 	//Link btn
 	--BTN-link-background: transparent;
 	--BTN-link-border: transparent;
@@ -28,6 +35,7 @@
 	--BTN-focus-color: #00b0f4;
 	--BTN-focus-radius: 3px;
 }
+
 //TODO: Css Variables
 
 button {
@@ -57,6 +65,7 @@ button {
 		background-color: var(--BTN-primary-hover-background);
 		border-color: var(--BTN-primary-hover-background);
 	}
+
 	&:active {
 		background-color: var(--BTN-primary-active-background);
 		border-color: var(--BTN-primary-active-background);
@@ -78,6 +87,7 @@ button {
 		background-color: var(--BTN-grey-hover-background);
 		border-color: var(--BTN-grey-hover-background);
 	}
+
 	&:active {
 		background-color: var(--BTN-grey-active-background);
 		border-color: var(--BTN-grey-active-background);
@@ -90,14 +100,38 @@ button {
 	}
 }
 
+.btn-green {
+	background: var(--BTN-green-background);
+	border-color: var(--BTN-green-border);
+	color: var(--BTN-green-color);
+
+	&:hover {
+		background-color: var(--BTN-green-hover-background);
+		border-color: var(--BTN-green-hover-background);
+	}
+
+	&:active {
+		background-color: var(--BTN-green-active-background);
+		border-color: var(--BTN-green-active-background);
+	}
+}
+
+.btn-green.btn-outline {
+	&:active {
+		background-color: var(--BTN-green-outline-active-background) !important;
+	}
+}
+
 .btn-red {
 	background: var(--BTN-red-background);
 	border-color: var(--BTN-red-border);
 	color: var(--BTN-red-color);
+
 	&:hover {
 		background-color: var(--BTN-red-hover-background);
 		border-color: var(--BTN-red-hover-background);
 	}
+
 	&:active {
 		background-color: var(--BTN-red-active-background);
 		border-color: var(--BTN-red-active-background);
@@ -106,6 +140,7 @@ button {
 
 .btn-red.btn-outline {
 	color: #f04747;
+
 	&:active {
 		background-color: var(--BTN-red-outline-active-background) !important;
 	}
@@ -115,6 +150,7 @@ button {
 	background: var(--BTN-link-background);
 	border-color: var(--BTN-link-border);
 	color: var(--BTN-link-color);
+
 	&:hover {
 		background-color: var(--BTN-link-hover-background);
 		text-decoration: underline;
