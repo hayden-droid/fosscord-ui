@@ -9,7 +9,7 @@
   --BTN-grey-border: #747f8d;
   --BTN-grey-color: #ffffff;
   --BTN-grey-hover-background: #68727f;
-  --BTN-grey-active-background: #5b6eae;
+  --BTN-grey-active-background: #5d6671;
   --BTN-grey-outline-active-background: rgb(104, 114, 127, 0.1);
   --BTN-red-background: #f04747;
   --BTN-red-border: #f04747;
@@ -21,29 +21,35 @@
   --BTN-link-border: transparent;
   --BTN-link-color: #ffffff;
   --BTN-link-hover-background: transparent;
+  --BTN-focus-color: #00b0f4;
+  --BTN-focus-radius: 3px;
 }
 
 button {
   border: 1px solid var(--BTN-primary-background);
   border-radius: 3px;
   padding: 2px 16px;
+  min-width: 60px;
+  min-height: 32px;
   cursor: pointer;
-  transition: background-color 0.17s ease, color 0.17s ease;
+  transition: border-color 0.17s ease, background-color 0.17s ease, color 0.17s ease;
 }
 button:focus {
   outline: none;
 }
 
 .btn-primary {
-  background: var(--BTN-primary-background);
+  background-color: var(--BTN-primary-background);
   border-color: var(--BTN-primary-border);
   color: var(--BTN-primary-color);
 }
 .btn-primary:hover {
   background-color: var(--BTN-primary-hover-background);
+  border-color: var(--BTN-primary-hover-background);
 }
 .btn-primary:active {
   background-color: var(--BTN-primary-active-background);
+  border-color: var(--BTN-primary-active-background);
 }
 
 .btn-primary.btn-outline:active {
@@ -57,9 +63,11 @@ button:focus {
 }
 .btn-grey:hover {
   background-color: var(--BTN-grey-hover-background);
+  border-color: var(--BTN-grey-hover-background);
 }
 .btn-grey:active {
   background-color: var(--BTN-grey-active-background);
+  border-color: var(--BTN-grey-active-background);
 }
 
 .btn-grey.btn-outline:active {
@@ -73,9 +81,11 @@ button:focus {
 }
 .btn-red:hover {
   background-color: var(--BTN-red-hover-background);
+  border-color: var(--BTN-red-hover-background);
 }
 .btn-red:active {
   background-color: var(--BTN-red-active-background);
+  border-color: var(--BTN-red-active-background);
 }
 
 .btn-red.btn-outline {

@@ -11,8 +11,7 @@
 	--BTN-grey-border: #747f8d;
 	--BTN-grey-color: #ffffff;
 	--BTN-grey-hover-background: #68727f;
-	//??
-	--BTN-grey-active-background: #5b6eae;
+	--BTN-grey-active-background: #5d6671;
 	--BTN-grey-outline-active-background: rgb(104, 114, 127, 0.1);
 	//Red btn
 	--BTN-red-background: #f04747;
@@ -26,6 +25,8 @@
 	--BTN-link-border: transparent;
 	--BTN-link-color: #ffffff;
 	--BTN-link-hover-background: transparent;
+	--BTN-focus-color: #00b0f4;
+	--BTN-focus-radius: 3px;
 }
 //TODO: Css Variables
 
@@ -33,25 +34,32 @@ button {
 	border: 1px solid var(--BTN-primary-background);
 	border-radius: 3px;
 	padding: 2px 16px;
+	min-width: 60px;
+	min-height: 32px;
 	cursor: pointer;
-	transition: background-color 0.17s ease, color 0.17s ease;
+	transition: border-color 0.17s ease, background-color 0.17s ease, color 0.17s ease;
 
 	&:focus {
 		outline: none;
-		//TODO: Nur wenn mit `tab` getabt wird:
-		// outline: 0.2rem solid #00b0f4;
+		// TODO: Nur wenn mit `tab` getabt wird:
+		// TODO: padding zwischen outline und box
+		// box-shadow anstatt outline -> runde outline box
+		// box-shadow: 0px 0px 0px var(--BTN-focus-radius) var(--BTN-focus-color);
 	}
 }
 
 .btn-primary {
-	background: var(--BTN-primary-background);
+	background-color: var(--BTN-primary-background);
 	border-color: var(--BTN-primary-border);
 	color: var(--BTN-primary-color);
+
 	&:hover {
 		background-color: var(--BTN-primary-hover-background);
+		border-color: var(--BTN-primary-hover-background);
 	}
 	&:active {
 		background-color: var(--BTN-primary-active-background);
+		border-color: var(--BTN-primary-active-background);
 	}
 }
 
@@ -65,11 +73,14 @@ button {
 	background: var(--BTN-grey-background);
 	border-color: var(--BTN-grey-border);
 	color: var(--BTN-grey-color);
+
 	&:hover {
 		background-color: var(--BTN-grey-hover-background);
+		border-color: var(--BTN-grey-hover-background);
 	}
 	&:active {
 		background-color: var(--BTN-grey-active-background);
+		border-color: var(--BTN-grey-active-background);
 	}
 }
 
@@ -85,9 +96,11 @@ button {
 	color: var(--BTN-red-color);
 	&:hover {
 		background-color: var(--BTN-red-hover-background);
+		border-color: var(--BTN-red-hover-background);
 	}
 	&:active {
 		background-color: var(--BTN-red-active-background);
+		border-color: var(--BTN-red-active-background);
 	}
 }
 
