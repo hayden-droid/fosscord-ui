@@ -1,0 +1,105 @@
+:root {
+  --BTN-primary-background: #7289da;
+  --BTN-primary-border: #7289da;
+  --BTN-primary-color: #ffffff;
+  --BTN-primary-hover-background: #677bc4;
+  --BTN-primary-active-background: #5b6eae;
+  --BTN-primary-outline-active-background: rgb(103, 123, 196, 0.1);
+  --BTN-grey-background: #747f8d;
+  --BTN-grey-border: #747f8d;
+  --BTN-grey-color: #ffffff;
+  --BTN-grey-hover-background: #68727f;
+  --BTN-grey-active-background: #5b6eae;
+  --BTN-grey-outline-active-background: rgb(104, 114, 127, 0.1);
+  --BTN-red-background: #f04747;
+  --BTN-red-border: #f04747;
+  --BTN-red-color: #ffffff;
+  --BTN-red-hover-background: #d84040;
+  --BTN-red-active-background: #c03939;
+  --BTN-red-outline-active-background: rgb(240, 71, 71, 0.1);
+  --BTN-link-background: transparent;
+  --BTN-link-border: transparent;
+  --BTN-link-color: #ffffff;
+  --BTN-link-hover-background: transparent;
+}
+
+button {
+  border: 1px solid var(--BTN-primary-background);
+  border-radius: 3px;
+  padding: 2px 16px;
+  cursor: pointer;
+  transition: background-color 0.17s ease, color 0.17s ease;
+}
+button:focus {
+  outline: none;
+}
+
+.btn-primary {
+  background: var(--BTN-primary-background);
+  border-color: var(--BTN-primary-border);
+  color: var(--BTN-primary-color);
+}
+.btn-primary:hover {
+  background-color: var(--BTN-primary-hover-background);
+}
+.btn-primary:active {
+  background-color: var(--BTN-primary-active-background);
+}
+
+.btn-primary.btn-outline:active {
+  background-color: var(--BTN-primary-outline-active-background) !important;
+}
+
+.btn-grey {
+  background: var(--BTN-grey-background);
+  border-color: var(--BTN-grey-border);
+  color: var(--BTN-grey-color);
+}
+.btn-grey:hover {
+  background-color: var(--BTN-grey-hover-background);
+}
+.btn-grey:active {
+  background-color: var(--BTN-grey-active-background);
+}
+
+.btn-grey.btn-outline:active {
+  background-color: var(--BTN-grey-outline-active-background) !important;
+}
+
+.btn-red {
+  background: var(--BTN-red-background);
+  border-color: var(--BTN-red-border);
+  color: var(--BTN-red-color);
+}
+.btn-red:hover {
+  background-color: var(--BTN-red-hover-background);
+}
+.btn-red:active {
+  background-color: var(--BTN-red-active-background);
+}
+
+.btn-red.btn-outline {
+  color: #f04747;
+}
+.btn-red.btn-outline:active {
+  background-color: var(--BTN-red-outline-active-background) !important;
+}
+
+.btn-link {
+  background: var(--BTN-link-background);
+  border-color: var(--BTN-link-border);
+  color: var(--BTN-link-color);
+}
+.btn-link:hover {
+  background-color: var(--BTN-link-hover-background);
+  text-decoration: underline;
+}
+
+.btn-outline {
+  background-color: transparent !important;
+}
+.btn-outline:hover {
+  background-color: transparent;
+}
+
+/*# sourceMappingURL=button.css.map */
