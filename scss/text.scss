@@ -1,5 +1,5 @@
 :root {
-	--TEXT-primary: #dcddde;
+	--TEXT-default: #dcddde;
 	--TEXT-secondary: #b9bbbe;
 	--TEXT-title: #8e9297;
 	--TEXT-link: #00b0f4;
@@ -7,9 +7,13 @@
 	--TEXT-muted: #72767d;
 }
 
-.text-primary {
+p {
+	margin: 0;
+}
+
+.text-default {
 	font-size: 1rem;
-	color: var(--TEXT-primary);
+	color: var(--TEXT-default);
 }
 
 .text-secondary {
@@ -29,7 +33,8 @@
 	color: var(--TEXT-muted);
 }
 
-.text-title {
+.text-title,
+.title {
 	font-size: 12px;
 	font-weight: 700;
 	text-transform: uppercase;

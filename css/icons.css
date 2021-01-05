@@ -12,6 +12,7 @@ i.fa {
 
 i {
   color: var(--ICON-color);
+  display: inline-block;
 }
 i path {
   fill: currentColor;
