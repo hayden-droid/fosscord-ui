@@ -145,9 +145,40 @@ button:focus {
   text-decoration: underline;
 }
 
-.icon img,
-.icon svg {
+:root {
+  --ICON-color: #b9bbbe;
+}
+
+i.fa {
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+i {
+  color: var(--ICON-color);
+}
+i path {
+  fill: currentColor;
+}
+i.size-1, i {
   width: 25px;
+  height: 25px;
+}
+i.size-2 {
+  width: 50px;
+  height: 50px;
+}
+i.size-3 {
+  width: 75px;
+  height: 75px;
+}
+
+.settings-solid {
+  -webkit-mask-image: url(../icons/solid/cog.svg);
+  mask-image: url(../icons/solid/cog.svg);
 }
 
 :root {
@@ -209,7 +240,8 @@ h3 {
   font-size: 16px;
 }
 
-.disabled {
+.disabled,
+*:disabled {
   cursor: not-allowed;
   opacity: 0.3;
 }
