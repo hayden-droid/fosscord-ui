@@ -1,0 +1,88 @@
+:root {
+  --LIST-separator-color: #ffffff0f;
+  --LIST-primary-color: var(--primary);
+  --LIST-success-color: var(--success);
+  --LIST-danger-color: var(--danger);
+  --LIST-selected-color: #fff;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.list .separator {
+  margin: 8px 10px;
+  height: 1px;
+  background-color: var(--LIST-separator-color);
+}
+.list .title {
+  padding-top: 0;
+}
+
+.list .item,
+.list-item,
+.list .title {
+  padding: 6px 10px;
+}
+
+.list .item,
+.list-item {
+  margin-bottom: 2px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: var(--interactive);
+}
+.list .item:hover,
+.list-item:hover {
+  background-color: #4f545c29;
+  color: var(--interactive-hover);
+}
+.list .item:active, .list .item.active,
+.list-item:active,
+.list-item.active {
+  background-color: #4f545c52;
+  color: var(--interactive-active);
+}
+.list .item.primary,
+.list-item.primary {
+  color: var(--LIST-primary-color);
+}
+.list .item.primary:hover,
+.list-item.primary:hover {
+  background-color: #7289da1a;
+}
+.list .item.primary:active, .list .item.primary.active,
+.list-item.primary:active,
+.list-item.primary.active {
+  color: var(--LIST-selected-color);
+  background-color: var(--LIST-primary-color);
+}
+.list .item.danger,
+.list-item.danger {
+  color: var(--LIST-danger-color);
+}
+.list .item.danger:hover,
+.list-item.danger:hover {
+  background-color: #f047471a;
+}
+.list .item.danger:active, .list .item.danger.active,
+.list-item.danger:active,
+.list-item.danger.active {
+  color: var(--LIST-selected-color);
+  background-color: var(--LIST-danger-color);
+}
+.list .item.success,
+.list-item.success {
+  color: var(--LIST-success-color);
+}
+.list .item.success:active, .list .item.success.active,
+.list-item.success:active,
+.list-item.success.active {
+  color: var(--LIST-selected-color);
+  background-color: var(--LIST-success-color);
+}
+
+/*# sourceMappingURL=list.css.map */

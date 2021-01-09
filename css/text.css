@@ -1,0 +1,65 @@
+:root {
+  --TEXT-default: #dcddde;
+  --TEXT-secondary: #b9bbbe;
+  --TEXT-title: #8e9297;
+  --TEXT-link: #00b0f4;
+  --TEXT-anchor: #ffffff;
+  --TEXT-muted: #72767d;
+}
+
+p {
+  margin: 0;
+}
+
+.text-default {
+  font-size: 1rem;
+  color: var(--TEXT-default);
+}
+
+.text-secondary {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--TEXT-secondary);
+}
+
+.text-secondary {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--TEXT-secondary);
+}
+
+.text-muted {
+  font-size: 0.75rem;
+  color: var(--TEXT-muted);
+}
+
+.text-title,
+.title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--TEXT-title);
+}
+
+.text-link {
+  color: var(--TEXT-link);
+  text-decoration: none;
+}
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.text-anchor {
+  color: var(--TEXT-anchor);
+  text-decoration: none;
+}
+.text-anchor:hover {
+  text-decoration: underline;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=text.css.map */

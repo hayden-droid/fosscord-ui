@@ -1,42 +1,40 @@
 :root {
-	//Primary btn
-	--BTN-primary-background: #7289da;
-	--BTN-primary-border: #7289da;
-	--BTN-primary-color: #ffffff;
+	// Primary btn
+	--BTN-primary-background: var(--primary);
+	--BTN-primary-border: var(--primary);
+	--BTN-primary-color: var(--text);
 	--BTN-primary-hover-background: #677bc4;
 	--BTN-primary-active-background: #5b6eae;
-	--BTN-primary-outline-active-background: rgb(103, 123, 196, 0.1);
-	//Grey btn
-	--BTN-grey-background: #747f8d;
-	--BTN-grey-border: #747f8d;
-	--BTN-grey-color: #ffffff;
-	--BTN-grey-hover-background: #68727f;
-	--BTN-grey-active-background: #5d6671;
-	--BTN-grey-outline-active-background: rgb(104, 114, 127, 0.1);
-	//Red btn
-	--BTN-red-background: #f04747;
-	--BTN-red-border: #f04747;
-	--BTN-red-color: #ffffff;
-	--BTN-red-hover-background: #d84040;
-	--BTN-red-active-background: #c03939;
-	--BTN-red-outline-active-background: rgb(240, 71, 71, 0.1);
-	//Green btn
-	--BTN-green-background: #43B581;
-	--BTN-green-border: #43B581;
-	--BTN-green-color: #ffffff;
-	--BTN-green-hover-background: #3CA374;
-	--BTN-green-active-background: #35976b;
-	--BTN-green-outline-active-background: rgb(240, 71, 71, 0.1);
-	//Link btn
+	--BTN-primary-outline-active-background: var(--primary-active);
+	// secondary btn
+	--BTN-secondary-background: var(--secondary);
+	--BTN-secondary-border: var(--secondary);
+	--BTN-secondary-color: var(--text);
+	--BTN-secondary-hover-background: #68727f;
+	--BTN-secondary-active-background: #5d6671;
+	--BTN-secondary-outline-active-background: var(--secondary-active);
+	// danger btn
+	--BTN-danger-background: var(--danger);
+	--BTN-danger-border: var(--danger);
+	--BTN-danger-color: var(--text);
+	--BTN-danger-hover-background: #d84040;
+	--BTN-danger-active-background: #c03939;
+	--BTN-danger-outline-active-background: var(--danger-active);
+	// success btn
+	--BTN-success-background: var(--success);
+	--BTN-success-border: var(--success);
+	--BTN-success-color: var(--text);
+	--BTN-success-hover-background: #3ca374;
+	--BTN-success-active-background: #35976b;
+	--BTN-success-outline-active-background: var(--success-active);
+	// Link btn
 	--BTN-link-background: transparent;
 	--BTN-link-border: transparent;
-	--BTN-link-color: #ffffff;
+	--BTN-link-color: var(--text);
 	--BTN-link-hover-background: transparent;
 	--BTN-focus-color: #00b0f4;
 	--BTN-focus-radius: 3px;
 }
-
-//TODO: Css Variables
 
 button {
 	border: 1px solid var(--BTN-primary-background);
@@ -53,6 +51,14 @@ button {
 		// TODO: padding zwischen outline und box
 		// box-shadow anstatt outline -> runde outline box
 		// box-shadow: 0px 0px 0px var(--BTN-focus-radius) var(--BTN-focus-color);
+	}
+}
+
+button.btn-outline {
+	background-color: transparent;
+
+	&:hover {
+		background-color: transparent;
 	}
 }
 
@@ -73,76 +79,82 @@ button {
 }
 
 .btn-primary.btn-outline {
+	color: var(--BTN-primary-background);
+
 	&:active {
 		background-color: var(--BTN-primary-outline-active-background) !important;
 	}
 }
 
-.btn-grey {
-	background: var(--BTN-grey-background);
-	border-color: var(--BTN-grey-border);
-	color: var(--BTN-grey-color);
+.btn-secondary {
+	background: var(--BTN-secondary-background);
+	border-color: var(--BTN-secondary-border);
+	color: var(--BTN-secondary-color);
 
 	&:hover {
-		background-color: var(--BTN-grey-hover-background);
-		border-color: var(--BTN-grey-hover-background);
+		background-color: var(--BTN-secondary-hover-background);
+		border-color: var(--BTN-secondary-hover-background);
 	}
 
 	&:active {
-		background-color: var(--BTN-grey-active-background);
-		border-color: var(--BTN-grey-active-background);
+		background-color: var(--BTN-secondary-active-background);
+		border-color: var(--BTN-secondary-active-background);
 	}
 }
 
-.btn-grey.btn-outline {
+.btn-secondary.btn-outline {
+	color: var(--BTN-secondary-background);
+
 	&:active {
-		background-color: var(--BTN-grey-outline-active-background) !important;
+		background-color: var(--BTN-secondary-outline-active-background) !important;
 	}
 }
 
-.btn-green {
-	background: var(--BTN-green-background);
-	border-color: var(--BTN-green-border);
-	color: var(--BTN-green-color);
+.btn-danger {
+	background: var(--BTN-danger-background);
+	border-color: var(--BTN-danger-border);
+	color: var(--BTN-danger-color);
 
 	&:hover {
-		background-color: var(--BTN-green-hover-background);
-		border-color: var(--BTN-green-hover-background);
+		background-color: var(--BTN-danger-hover-background);
+		border-color: var(--BTN-danger-hover-background);
 	}
 
 	&:active {
-		background-color: var(--BTN-green-active-background);
-		border-color: var(--BTN-green-active-background);
+		background-color: var(--BTN-danger-active-background);
+		border-color: var(--BTN-danger-active-background);
 	}
 }
 
-.btn-green.btn-outline {
+.btn-danger.btn-outline {
+	color: var(--BTN-danger-background);
+
 	&:active {
-		background-color: var(--BTN-green-outline-active-background) !important;
+		background-color: var(--BTN-danger-outline-active-background) !important;
 	}
 }
 
-.btn-red {
-	background: var(--BTN-red-background);
-	border-color: var(--BTN-red-border);
-	color: var(--BTN-red-color);
+.btn-success {
+	background: var(--BTN-success-background);
+	border-color: var(--BTN-success-border);
+	color: var(--BTN-success-color);
 
 	&:hover {
-		background-color: var(--BTN-red-hover-background);
-		border-color: var(--BTN-red-hover-background);
+		background-color: var(--BTN-success-hover-background);
+		border-color: var(--BTN-success-hover-background);
 	}
 
 	&:active {
-		background-color: var(--BTN-red-active-background);
-		border-color: var(--BTN-red-active-background);
+		background-color: var(--BTN-success-active-background);
+		border-color: var(--BTN-success-active-background);
 	}
 }
 
-.btn-red.btn-outline {
-	color: #f04747;
+.btn-success.btn-outline {
+	color: var(--BTN-success-background);
 
 	&:active {
-		background-color: var(--BTN-red-outline-active-background) !important;
+		background-color: var(--BTN-success-outline-active-background) !important;
 	}
 }
 
@@ -154,13 +166,5 @@ button {
 	&:hover {
 		background-color: var(--BTN-link-hover-background);
 		text-decoration: underline;
-	}
-}
-
-.btn-outline {
-	background-color: transparent !important;
-
-	&:hover {
-		background-color: transparent;
 	}
 }

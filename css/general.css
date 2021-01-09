@@ -1,0 +1,31 @@
+:root {
+  --primary: #7289da;
+  --primary-active: #7289da1a;
+  --secondary: #747f8d;
+  --secondary-active: #747f8d1a;
+  --success: #43b581;
+  --success-active: #43b5811a;
+  --danger: #f04747;
+  --danger-active: #f047471a;
+  --text: #ffffff;
+  --interactive: #b9bbbe;
+  --interactive-active: var(--text);
+  --interactive-hover: #dcddde;
+}
+
+.disabled,
+*:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.noselect,
+.item {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  user-select: none;
+}
+
+/*# sourceMappingURL=general.css.map */
