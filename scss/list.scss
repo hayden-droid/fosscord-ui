@@ -1,8 +1,13 @@
 :root {
 	--LIST-separator-color: #ffffff0f;
 	--LIST-primary-color: var(--primary);
+	--LIST-primary-hover-color: var(--primary-hover);
+	--LIST-primary-active-color: var(--primary-active);
 	--LIST-success-color: var(--success);
+	--LIST-success-hover-color: var(--success-hover);
 	--LIST-danger-color: var(--danger);
+	--LIST-danger-hover-color: var(--danger-hover);
+	--LIST-background-accent: var(--background-tertiary);
 	--LIST-selected-color: #fff;
 }
 
@@ -12,6 +17,7 @@
 	list-style: none;
 	padding-left: 0;
 	margin: 0;
+	border-radius: 4px;
 
 	.separator {
 		margin: 8px 10px;
@@ -19,8 +25,48 @@
 		background-color: var(--LIST-separator-color);
 	}
 
+	&.accent {
+		background-color: var(--LIST-background-accent);
+		padding: 6px 8px;
+
+		.item {
+			&:hover,
+			&.hover {
+				color: var(--LIST-selected-color);
+				background-color: var(--LIST-primary-color);
+			}
+
+			&:active,
+			&.active {
+				background-color: var(--LIST-primary-active-color);
+			}
+		}
+	}
+
+	&.collapsed {
+		.title {
+			i {
+				transform: rotate(-90deg);
+			}
+		}
+
+		.item,
+		.title:not(.collapse),
+		.separator {
+			display: none;
+		}
+	}
+
 	.title {
 		padding-top: 0;
+
+		i {
+			margin-left: -13px;
+			color: inherit;
+			width: 10px;
+			height: 10px;
+			transition: transform 0.2s ease;
+		}
 	}
 }
 
@@ -36,10 +82,36 @@
 	border-radius: 3px;
 	cursor: pointer;
 	color: var(--interactive);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	i {
+		height: 15px;
+		width: 15px;
+
+		&.left {
+			margin-right: 6px;
+		}
+
+		&.right {
+			margin-left: 6px;
+			height: 12px;
+			width: 12px;
+		}
+	}
+
+	.content {
+		flex-grow: 1;
+	}
 
 	&:hover {
 		background-color: #4f545c29;
 		color: var(--interactive-hover);
+
+		.visibleOnHover {
+			opacity: 1;
+		}
 	}
 
 	&:active,
@@ -52,7 +124,7 @@
 		color: var(--LIST-primary-color);
 
 		&:hover {
-			background-color: #7289da1a;
+			background-color: var(--LIST-primary-hover-color);
 		}
 
 		&:active,
@@ -66,7 +138,7 @@
 		color: var(--LIST-danger-color);
 
 		&:hover {
-			background-color: #f047471a;
+			background-color: var(--LIST-danger-hover-color);
 		}
 
 		&:active,
@@ -78,6 +150,10 @@
 
 	&.success {
 		color: var(--LIST-success-color);
+
+		&:hover {
+			background-color: var(--LIST-success-hover-color);
+		}
 
 		&:active,
 		&.active {

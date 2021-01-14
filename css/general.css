@@ -1,13 +1,19 @@
 :root {
   --primary: #7289da;
-  --primary-active: #7289da1a;
+  --primary-shade: #5c6fb1;
+  --primary-hover: rgba(114, 137, 218, 0.1);
+  --primary-active: #4e5d94;
   --secondary: #747f8d;
-  --secondary-active: #747f8d1a;
+  --secondary-hover: rgba(116, 127, 141, 0.1);
   --success: #43b581;
-  --success-active: #43b5811a;
+  --success-hover: rgba(67, 181, 129, 0.1);
   --danger: #f04747;
-  --danger-active: #f047471a;
+  --danger-hover: rgba(240, 71, 71, 0.1);
   --text: #ffffff;
+  --background-primary: #36393f;
+  --background-secondary: #2f3136;
+  --background-tertiary: #202225;
+  --background-floating: #18191c;
   --interactive: #b9bbbe;
   --interactive-active: var(--text);
   --interactive-hover: #dcddde;
@@ -26,6 +32,13 @@
   -webkit-user-select: none;
   /* Safari */
   user-select: none;
+}
+
+.visibleOnHover {
+  opacity: 0;
+}
+.visibleOnHover:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=general.css.map */

@@ -1,8 +1,13 @@
 :root {
   --LIST-separator-color: #ffffff0f;
   --LIST-primary-color: var(--primary);
+  --LIST-primary-hover-color: var(--primary-hover);
+  --LIST-primary-active-color: var(--primary-active);
   --LIST-success-color: var(--success);
+  --LIST-success-hover-color: var(--success-hover);
   --LIST-danger-color: var(--danger);
+  --LIST-danger-hover-color: var(--danger-hover);
+  --LIST-background-accent: var(--background-tertiary);
   --LIST-selected-color: #fff;
 }
 
@@ -12,14 +17,41 @@
   list-style: none;
   padding-left: 0;
   margin: 0;
+  border-radius: 4px;
 }
 .list .separator {
   margin: 8px 10px;
   height: 1px;
   background-color: var(--LIST-separator-color);
 }
+.list.accent {
+  background-color: var(--LIST-background-accent);
+  padding: 6px 8px;
+}
+.list.accent .item:hover, .list.accent .item.hover {
+  color: var(--LIST-selected-color);
+  background-color: var(--LIST-primary-color);
+}
+.list.accent .item:active, .list.accent .item.active {
+  background-color: var(--LIST-primary-active-color);
+}
+.list.collapsed .title i {
+  transform: rotate(-90deg);
+}
+.list.collapsed .item,
+.list.collapsed .title:not(.collapse),
+.list.collapsed .separator {
+  display: none;
+}
 .list .title {
   padding-top: 0;
+}
+.list .title i {
+  margin-left: -13px;
+  color: inherit;
+  width: 10px;
+  height: 10px;
+  transition: transform 0.2s ease;
 }
 
 .list .item,
@@ -34,11 +66,37 @@
   border-radius: 3px;
   cursor: pointer;
   color: var(--interactive);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list .item i,
+.list-item i {
+  height: 15px;
+  width: 15px;
+}
+.list .item i.left,
+.list-item i.left {
+  margin-right: 6px;
+}
+.list .item i.right,
+.list-item i.right {
+  margin-left: 6px;
+  height: 12px;
+  width: 12px;
+}
+.list .item .content,
+.list-item .content {
+  flex-grow: 1;
 }
 .list .item:hover,
 .list-item:hover {
   background-color: #4f545c29;
   color: var(--interactive-hover);
+}
+.list .item:hover .visibleOnHover,
+.list-item:hover .visibleOnHover {
+  opacity: 1;
 }
 .list .item:active, .list .item.active,
 .list-item:active,
@@ -52,7 +110,7 @@
 }
 .list .item.primary:hover,
 .list-item.primary:hover {
-  background-color: #7289da1a;
+  background-color: var(--LIST-primary-hover-color);
 }
 .list .item.primary:active, .list .item.primary.active,
 .list-item.primary:active,
@@ -66,7 +124,7 @@
 }
 .list .item.danger:hover,
 .list-item.danger:hover {
-  background-color: #f047471a;
+  background-color: var(--LIST-danger-hover-color);
 }
 .list .item.danger:active, .list .item.danger.active,
 .list-item.danger:active,
@@ -77,6 +135,10 @@
 .list .item.success,
 .list-item.success {
   color: var(--LIST-success-color);
+}
+.list .item.success:hover,
+.list-item.success:hover {
+  background-color: var(--LIST-success-hover-color);
 }
 .list .item.success:active, .list .item.success.active,
 .list-item.success:active,

@@ -1,13 +1,24 @@
+$primary: #7289da;
+$secondary: #747f8d;
+$success: #43b581;
+$danger: #f04747;
+
 :root {
-	--primary: #7289da;
-	--primary-active: #7289da1a;
-	--secondary: #747f8d;
-	--secondary-active: #747f8d1a;
-	--success: #43b581;
-	--success-active: #43b5811a;
-	--danger: #f04747;
-	--danger-active: #f047471a;
+	--primary: #{$primary};
+	--primary-shade: #5c6fb1;
+	--primary-hover: #{rgba($primary, 0.1)};
+	--primary-active: #4e5d94;
+	--secondary: #{$secondary};
+	--secondary-hover: #{rgba($secondary, 0.1)};
+	--success: #{$success};
+	--success-hover: #{rgba($success, 0.1)};
+	--danger: #{$danger};
+	--danger-hover: #{rgba($danger, 0.1)};
 	--text: #ffffff;
+	--background-primary: #36393f;
+	--background-secondary: #2f3136;
+	--background-tertiary: #202225;
+	--background-floating: #18191c;
 	--interactive: #b9bbbe;
 	--interactive-active: var(--text);
 	--interactive-hover: #dcddde;
@@ -24,4 +35,12 @@
 	-webkit-touch-callout: none; /* iOS Safari */
 	-webkit-user-select: none; /* Safari */
 	user-select: none;
+}
+
+.visibleOnHover {
+	opacity: 0;
+
+	&:hover {
+		opacity: 1;
+	}
 }

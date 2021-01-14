@@ -17,6 +17,10 @@ i {
 i path {
   fill: currentColor;
 }
+i.size-half {
+  width: 15px;
+  height: 15px;
+}
 i.size-1, i {
   width: 25px;
   height: 25px;
@@ -33,6 +37,16 @@ i.size-3 {
 .settings-solid {
   -webkit-mask-image: url(../icons/solid/cog.svg);
   mask-image: url(../icons/solid/cog.svg);
+}
+
+.voice-chat {
+  -webkit-mask-image: url(../icons/solid/volume-up.svg);
+  mask-image: url(../icons/solid/volume-up.svg);
+}
+
+.chevron-down {
+  -webkit-mask-image: url(../icons/solid/chevron-down.svg);
+  mask-image: url(../icons/solid/chevron-down.svg);
 }
 
 /*# sourceMappingURL=icons.css.map */
