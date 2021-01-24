@@ -1,8 +1,8 @@
 {
-	"name": "discord-css-framwork",
+	"name": "discord-css",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "css/index.css",
 	"scripts": {
 		"scss": "sass scss/:css --watch"
 	},
