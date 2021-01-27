@@ -60,111 +60,118 @@ button {
 			background-color: transparent;
 		}
 	}
-}
 
-.primary {
-	background-color: var(--BTN-primary-background);
-	border-color: var(--BTN-primary-border);
-	color: var(--BTN-primary-color);
+	&.primary {
+		background-color: var(--BTN-primary-background);
+		border-color: var(--BTN-primary-border);
+		color: var(--BTN-primary-color);
 
-	&:hover {
-		background-color: var(--BTN-primary-hover-background);
-		border-color: var(--BTN-primary-hover-background);
+		&:hover {
+			background-color: var(--BTN-primary-hover-background);
+			border-color: var(--BTN-primary-hover-background);
+		}
+
+		&:active {
+			background-color: var(--BTN-primary-active-background);
+			border-color: var(--BTN-primary-active-background);
+		}
+
+		&.outline {
+			color: var(--BTN-primary-background);
+
+			&:active {
+				background-color: var(--BTN-primary-outline-active-background) !important;
+			}
+		}
 	}
 
-	&:active {
-		background-color: var(--BTN-primary-active-background);
-		border-color: var(--BTN-primary-active-background);
+	&.secondary {
+		background: var(--BTN-secondary-background);
+		border-color: var(--BTN-secondary-border);
+		color: var(--BTN-secondary-color);
+
+		&:hover {
+			background-color: var(--BTN-secondary-hover-background);
+			border-color: var(--BTN-secondary-hover-background);
+		}
+
+		&:active {
+			background-color: var(--BTN-secondary-active-background);
+			border-color: var(--BTN-secondary-active-background);
+		}
+
+		&.outline {
+			color: var(--BTN-secondary-background);
+
+			&:active {
+				background-color: var(--BTN-secondary-outline-active-background) !important;
+			}
+		}
+	}
+
+	&.danger {
+		background: var(--BTN-danger-background);
+		border-color: var(--BTN-danger-border);
+		color: var(--BTN-danger-color);
+
+		&:hover {
+			background-color: var(--BTN-danger-hover-background);
+			border-color: var(--BTN-danger-hover-background);
+		}
+
+		&:active {
+			background-color: var(--BTN-danger-active-background);
+			border-color: var(--BTN-danger-active-background);
+		}
+
+		&.outline {
+			color: var(--BTN-danger-background);
+
+			&:active {
+				background-color: var(--BTN-danger-outline-active-background) !important;
+			}
+		}
+	}
+
+	&.success {
+		background: var(--BTN-success-background);
+		border-color: var(--BTN-success-border);
+		color: var(--BTN-success-color);
+
+		&:hover {
+			background-color: var(--BTN-success-hover-background);
+			border-color: var(--BTN-success-hover-background);
+		}
+
+		&:active {
+			background-color: var(--BTN-success-active-background);
+			border-color: var(--BTN-success-active-background);
+		}
+
+		&.outline {
+			color: var(--BTN-success-background);
+
+			&:active {
+				background-color: var(--BTN-success-outline-active-background) !important;
+			}
+		}
+	}
+
+	&.link {
+		background: var(--BTN-link-background);
+		border-color: var(--BTN-link-border);
+		color: var(--BTN-link-color);
+
+		&:hover {
+			background-color: var(--BTN-link-hover-background);
+			text-decoration: underline;
+		}
 	}
 
 	&.outline {
-		color: var(--BTN-primary-background);
-
-		&:active {
-			background-color: var(--BTN-primary-outline-active-background) !important;
+		background-color: initial;
+		&:hover {
+			background-color: initial;
 		}
-	}
-}
-
-.secondary {
-	background: var(--BTN-secondary-background);
-	border-color: var(--BTN-secondary-border);
-	color: var(--BTN-secondary-color);
-
-	&:hover {
-		background-color: var(--BTN-secondary-hover-background);
-		border-color: var(--BTN-secondary-hover-background);
-	}
-
-	&:active {
-		background-color: var(--BTN-secondary-active-background);
-		border-color: var(--BTN-secondary-active-background);
-	}
-
-	&.outline {
-		color: var(--BTN-secondary-background);
-
-		&:active {
-			background-color: var(--BTN-secondary-outline-active-background) !important;
-		}
-	}
-}
-
-.danger {
-	background: var(--BTN-danger-background);
-	border-color: var(--BTN-danger-border);
-	color: var(--BTN-danger-color);
-
-	&:hover {
-		background-color: var(--BTN-danger-hover-background);
-		border-color: var(--BTN-danger-hover-background);
-	}
-
-	&:active {
-		background-color: var(--BTN-danger-active-background);
-		border-color: var(--BTN-danger-active-background);
-	}
-
-	&.outline {
-		color: var(--BTN-danger-background);
-
-		&:active {
-			background-color: var(--BTN-danger-outline-active-background) !important;
-		}
-	}
-}
-
-.success {
-	background: var(--BTN-success-background);
-	border-color: var(--BTN-success-border);
-	color: var(--BTN-success-color);
-
-	&:hover {
-		background-color: var(--BTN-success-hover-background);
-		border-color: var(--BTN-success-hover-background);
-	}
-
-	&:active {
-		background-color: var(--BTN-success-active-background);
-		border-color: var(--BTN-success-active-background);
-	}
-
-	&.outline {
-		color: var(--BTN-success-background);
-
-		&:active {
-			background-color: var(--BTN-success-outline-active-background) !important;
-		}
-	}
-}
-
-.link {
-	background: var(--BTN-link-background);
-	border-color: var(--BTN-link-border);
-	color: var(--BTN-link-color);
-
-	&:hover {
-		background-color: var(--BTN-link-hover-background);
-		text-decoration: underline;
 	}
 }

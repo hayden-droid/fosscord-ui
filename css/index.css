@@ -75,7 +75,7 @@
 }
 
 button {
-  border: 1px solid var(--BTN-primary-background);
+  border: 1px solid transparent;
   border-radius: 3px;
   padding: 2px 16px;
   min-width: 60px;
@@ -86,145 +86,138 @@ button {
 button:focus {
   outline: none;
 }
-
-button.btn-outline {
+button.outline {
   background-color: transparent;
 }
-button.btn-outline:hover {
+button.outline:hover {
   background-color: transparent;
 }
-
-.btn-primary {
+button.primary {
   background-color: var(--BTN-primary-background);
   border-color: var(--BTN-primary-border);
   color: var(--BTN-primary-color);
 }
-.btn-primary:hover {
+button.primary:hover {
   background-color: var(--BTN-primary-hover-background);
   border-color: var(--BTN-primary-hover-background);
 }
-.btn-primary:active {
+button.primary:active {
   background-color: var(--BTN-primary-active-background);
   border-color: var(--BTN-primary-active-background);
 }
-
-.btn-primary.btn-outline {
+button.primary.outline {
   color: var(--BTN-primary-background);
 }
-.btn-primary.btn-outline:active {
+button.primary.outline:active {
   background-color: var(--BTN-primary-outline-active-background) !important;
 }
-
-.btn-secondary {
+button.secondary {
   background: var(--BTN-secondary-background);
   border-color: var(--BTN-secondary-border);
   color: var(--BTN-secondary-color);
 }
-.btn-secondary:hover {
+button.secondary:hover {
   background-color: var(--BTN-secondary-hover-background);
   border-color: var(--BTN-secondary-hover-background);
 }
-.btn-secondary:active {
+button.secondary:active {
   background-color: var(--BTN-secondary-active-background);
   border-color: var(--BTN-secondary-active-background);
 }
-
-.btn-secondary.btn-outline {
+button.secondary.outline {
   color: var(--BTN-secondary-background);
 }
-.btn-secondary.btn-outline:active {
+button.secondary.outline:active {
   background-color: var(--BTN-secondary-outline-active-background) !important;
 }
-
-.btn-danger {
+button.danger {
   background: var(--BTN-danger-background);
   border-color: var(--BTN-danger-border);
   color: var(--BTN-danger-color);
 }
-.btn-danger:hover {
+button.danger:hover {
   background-color: var(--BTN-danger-hover-background);
   border-color: var(--BTN-danger-hover-background);
 }
-.btn-danger:active {
+button.danger:active {
   background-color: var(--BTN-danger-active-background);
   border-color: var(--BTN-danger-active-background);
 }
-
-.btn-danger.btn-outline {
+button.danger.outline {
   color: var(--BTN-danger-background);
 }
-.btn-danger.btn-outline:active {
+button.danger.outline:active {
   background-color: var(--BTN-danger-outline-active-background) !important;
 }
-
-.btn-success {
+button.success {
   background: var(--BTN-success-background);
   border-color: var(--BTN-success-border);
   color: var(--BTN-success-color);
 }
-.btn-success:hover {
+button.success:hover {
   background-color: var(--BTN-success-hover-background);
   border-color: var(--BTN-success-hover-background);
 }
-.btn-success:active {
+button.success:active {
   background-color: var(--BTN-success-active-background);
   border-color: var(--BTN-success-active-background);
 }
-
-.btn-success.btn-outline {
+button.success.outline {
   color: var(--BTN-success-background);
 }
-.btn-success.btn-outline:active {
+button.success.outline:active {
   background-color: var(--BTN-success-outline-active-background) !important;
 }
-
-.btn-link {
+button.link {
   background: var(--BTN-link-background);
   border-color: var(--BTN-link-border);
   color: var(--BTN-link-color);
 }
-.btn-link:hover {
+button.link:hover {
   background-color: var(--BTN-link-hover-background);
   text-decoration: underline;
+}
+button.outline {
+  background-color: initial;
+}
+button.outline:hover {
+  background-color: initial;
 }
 
 :root {
   --ICON-color: #b9bbbe;
 }
 
-i.fa {
+i.icon {
+  color: var(--ICON-color);
+  display: inline-block;
   background-color: currentColor;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-repeat: no-repeat;
   mask-position: center;
 }
-
-i {
-  color: var(--ICON-color);
-  display: inline-block;
-}
-i path {
+i.icon path {
   fill: currentColor;
 }
-i.size-half {
+i.icon.size-half {
   width: 15px;
   height: 15px;
 }
-i.size-1, i {
+i.icon.size-1, i.icon {
   width: 25px;
   height: 25px;
 }
-i.size-2 {
+i.icon.size-2 {
   width: 50px;
   height: 50px;
 }
-i.size-3 {
+i.icon.size-3 {
   width: 75px;
   height: 75px;
 }
 
-.settings-solid {
+.settings {
   -webkit-mask-image: url(../icons/solid/cog.svg);
   mask-image: url(../icons/solid/cog.svg);
 }

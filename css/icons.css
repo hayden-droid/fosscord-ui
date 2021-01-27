@@ -2,39 +2,36 @@
   --ICON-color: #b9bbbe;
 }
 
-i.fa {
+i.icon {
+  color: var(--ICON-color);
+  display: inline-block;
   background-color: currentColor;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-repeat: no-repeat;
   mask-position: center;
 }
-
-i {
-  color: var(--ICON-color);
-  display: inline-block;
-}
-i path {
+i.icon path {
   fill: currentColor;
 }
-i.size-half {
+i.icon.size-half {
   width: 15px;
   height: 15px;
 }
-i.size-1, i {
+i.icon.size-1, i.icon {
   width: 25px;
   height: 25px;
 }
-i.size-2 {
+i.icon.size-2 {
   width: 50px;
   height: 50px;
 }
-i.size-3 {
+i.icon.size-3 {
   width: 75px;
   height: 75px;
 }
 
-.settings-solid {
+.settings {
   -webkit-mask-image: url(../icons/solid/cog.svg);
   mask-image: url(../icons/solid/cog.svg);
 }

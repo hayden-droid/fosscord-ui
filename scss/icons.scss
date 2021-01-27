@@ -2,18 +2,14 @@
 	--ICON-color: #b9bbbe;
 }
 
-i.fa {
+i.icon {
+	color: var(--ICON-color);
+	display: inline-block;
 	background-color: currentColor;
-
 	-webkit-mask-repeat: no-repeat;
 	-webkit-mask-position: center;
 	mask-repeat: no-repeat;
 	mask-position: center;
-}
-
-i {
-	color: var(--ICON-color);
-	display: inline-block;
 
 	path {
 		fill: currentColor;
@@ -41,7 +37,7 @@ i {
 	}
 }
 
-.settings-solid {
+.settings {
 	-webkit-mask-image: url(../icons/solid/cog.svg);
 	mask-image: url(../icons/solid/cog.svg);
 }
