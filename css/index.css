@@ -245,49 +245,37 @@ p {
   margin: 0;
 }
 
-.text-default {
+.text.default {
   font-size: 1rem;
   color: var(--TEXT-default);
 }
-
-.text-secondary {
+.text.secondary {
   font-size: 14px;
   font-weight: 400;
   color: var(--TEXT-secondary);
 }
-
-.text-secondary {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--TEXT-secondary);
-}
-
-.text-muted {
+.text.muted {
   font-size: 0.75rem;
   color: var(--TEXT-muted);
 }
-
-.text-title,
-.title {
+.text.title {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--TEXT-title);
 }
-
-.text-link {
+.text.link {
   color: var(--TEXT-link);
   text-decoration: none;
 }
-.text-link:hover {
+.text.link:hover {
   text-decoration: underline;
 }
-
-.text-anchor {
+.text.anchor {
   color: var(--TEXT-anchor);
   text-decoration: none;
 }
-.text-anchor:hover {
+.text.anchor:hover {
   text-decoration: underline;
 }
 
