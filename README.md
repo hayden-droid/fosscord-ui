@@ -3,6 +3,8 @@ This will be an unoffical css framework in the style of Discord.
 
 ## [Demo](https://discord-open-source.github.io/discord-css/test/)
 
+## [Wiki](https://github.com/discord-open-source/discord-css/wiki)
+
 ## Features
 Light & Dark Mode
 
