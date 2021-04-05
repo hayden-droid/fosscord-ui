@@ -74,12 +74,13 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  transition: border-radius 0.5s;
 }
 .guild.active > img {
   border-radius: 35%;
 }
 .guild.active > .pill {
-  height: 2.5rem;
+  height: 2.5rem !important;
   width: 0.25rem;
   background-color: var(--pill);
 }
@@ -102,6 +103,14 @@
   width: 40%;
   border: none;
   border-bottom: 2px solid var(--sec);
+}
+.guild:hover > .pill {
+  height: 1.25rem;
+  width: 0.25rem;
+  background-color: var(--pill);
+}
+.guild:hover > img {
+  border-radius: 35%;
 }
 
 .pill {
