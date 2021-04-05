@@ -1,0 +1,22 @@
+:root {
+  --background: var(--background-tertiary);
+  --pill: var(--text);
+}
+
+.guild-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+}
+
+.guild {
+  margin: 0.25rem;
+}
+.guild {
+  border-radius: 50%;
+}
+.guild.active {
+  border-radius: 25%;
+}
+
+/*# sourceMappingURL=guild.css.map */
