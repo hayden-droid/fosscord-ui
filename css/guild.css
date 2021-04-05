@@ -68,14 +68,14 @@
 .guild:hover > img {
   border-radius: 35%;
 }
-
-.pill {
-  height: 0.6rem;
+.guild > .pill {
+  height: 0rem;
   width: 0.25rem;
   background-color: transparent;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   margin-right: 0.3rem;
+  transition: height 0.2s;
 }
 
 /*# sourceMappingURL=guild.css.map */
