@@ -2,6 +2,7 @@ $primary: #7289da;
 $secondary: #747f8d;
 $success: #43b581;
 $danger: #f04747;
+$warning: #faa61a;
 
 :root {
 	--primary: #{$primary};
@@ -14,6 +15,7 @@ $danger: #f04747;
 	--success-hover: #{rgba($success, 0.1)};
 	--danger: #{$danger};
 	--danger-hover: #{rgba($danger, 0.1)};
+	--warning: #{$warning};
 	--text: #ffffff;
 	--background-primary: #36393f;
 	--background-secondary: #2f3136;

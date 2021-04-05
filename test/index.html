@@ -36,34 +36,46 @@
 			#slider {
 				color: aquamarine;
 			}
+			a {
+				background-color: #2f3136;
+				padding: 0.5rem;
+				margin: 0.25rem;
+				width: 7rem;
+				text-align: center;
+				border-radius: 0.3rem;
+			}
+			.main {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.main2 {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
 		</style>
 	</head>
 
 	<body>
 		<h1>Components</h1>
-
-		<a href="button.html">
-			<button class="btn primary">Buttons</button>
-		</a>
-		<br />
-		<a href="text.html" class="text link"> Text </a>
-		<br />
-		<a href="list.html" id="list" class="list-item nolink">List</a>
-		<br />
-		<a href="icons.html" id="icons" class="nolink2 nolink">
-			Icons
-			<br />
-			<i class="fa settings-solid"> </i>
-		</a>
-		<br />
-		<a href="slider.html" id="slider" class="list-item nolink">Slider</a>
-		<br />
-		<a href="popup.html" id="popup" class="list-item nolink">Popup</a>
-		<br />
-		<a href="guild.html" id="guild" class="list-item nolink">Guild</a>
-
-		<a href="input-fields.html" id="input" style="text-decoration: none">
-			<input class="single-input" placeholder="Input Fields" maxlength="100" name="" type="text" value="" />
-		</a>
+		<div class="main">
+			<div class="main2">
+				<a href="button.html" class="text link">Buttons</a>
+				<a href="text.html" class="text link">Text</a>
+				<a href="list.html" class="text link">List</a>
+			</div>
+			<div class="main2">
+				<a href="icons.html" class="text link">Icons</a>
+				<a href="slider.html" class="text link">Slider</a>
+				<a href="popup.html" class="text link">Popup</a>
+			</div>
+			<div class="main2">
+				<a href="guild.html" class="text link">Guild</a>
+				<a href="input-fields.html" class="text link">Inputs</a>
+				<a href="indicators.html" class="text link">Indicators</a>
+			</div>
+		</div>
 	</body>
 </html>
