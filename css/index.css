@@ -44,6 +44,7 @@
 
 :root {
   --background: var(--background-tertiary);
+  --sec: var(--background-primary);
   --pill: var(--text);
 }
 
@@ -51,16 +52,65 @@
   display: flex;
   flex-direction: column;
   background-color: var(--background);
+  padding-top: 0.5rem;
 }
 
 .guild {
-  margin: 0.25rem;
+  display: flex;
+  margin-right: 0.6rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
 }
-.guild {
-  border-radius: 50%;
+.guild.unread > .pill {
+  background-color: var(--pill);
+  height: 0.6rem;
+  width: 0.25rem;
 }
 .guild.active {
   border-radius: 25%;
+}
+.guild > img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.guild.active > img {
+  border-radius: 35%;
+}
+.guild.active > .pill {
+  height: 2.5rem;
+  width: 0.25rem;
+  background-color: var(--pill);
+}
+.guild.home > a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--sec);
+}
+.guild.seperator {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.guild.seperator > hr {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  width: 40%;
+  border: none;
+  border-bottom: 2px solid var(--sec);
+}
+
+.pill {
+  height: 0.6rem;
+  width: 0.25rem;
+  background-color: transparent;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  margin-right: 0.3rem;
 }
 
 :root {
