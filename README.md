@@ -11,13 +11,12 @@ Light & Dark Mode
 ## Components
 * Page 
 * Discord View (server + dm list + channel)
-* [List](https://github.com/fosscord/fosscord-css/issues/6)
-* [Input Field](https://github.com/fosscord/fosscord-css/issues/5)
-* [Dropdown](https://github.com/fosscord/fosscord-css/issues/4)
-* [Button](https://github.com/fosscord/fosscord-css/issues/1)
-* [Switch](https://github.com/fosscord/fosscord-css/issues/2)
-* [Tooltip](https://github.com/fosscord/fosscord-css/issues/3)
-* [Popup](https://github.com/fosscord/fosscord-css/issues/7)
-   
-## Colors
-Everything should be colorable:
+* [Buttons](https://fosscord.github.io/fosscord-css/test/button.html)
+* [Icons](https://fosscord.github.io/fosscord-css/test/icons.html)
+* [Sidebar-Right](https://fosscord.github.io/fosscord-css/test/guild.html)
+* [Text](https://fosscord.github.io/fosscord-css/test/text.html)
+* [Slider](https://fosscord.github.io/fosscord-css/test/slider.html)
+* [Input fields](https://fosscord.github.io/fosscord-css/test/input-fields.html)
+* [Lists](https://fosscord.github.io/fosscord-css/test/list.html)
+* [Popup](https://fosscord.github.io/fosscord-css/test/popup.html)
+* [Indicators](https://fosscord.github.io/fosscord-css/test/indicators.html)
