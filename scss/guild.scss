@@ -1,13 +1,13 @@
 :root {
-	--bg: var(--background-tertiary);
-	--sec: var(--background-primary);
-	--pill: var(--text);
+	--guild-container-background: var(--background-tertiary);
+	--guild-container-secondary: var(--background-primary);
+	--guild-pill: var(--text);
 }
 
 .guild-container {
 	display: flex;
 	flex-direction: column;
-	background-color: var(--bg);
+	background-color: var(--guild-container-background);
 	padding-top: 0.5rem;
 }
 .guild {
@@ -18,7 +18,7 @@
 	cursor: pointer;
 
 	&.unread > .pill {
-		background-color: var(--pill);
+		background-color: var(--guild-pill);
 		height: 0.6rem;
 		width: 0.25rem;
 	}
@@ -37,13 +37,13 @@
 	&.active > .pill {
 		height: 2.5rem !important;
 		width: 0.25rem;
-		background-color: var(--pill);
+		background-color: var(--guild-pill);
 	}
 	&.home > a {
 		width: 48px;
 		height: 48px;
 		border-radius: 50%;
-		background-color: var(--sec);
+		background-color: var(--guild-container-secondary);
 	}
 	&.seperator {
 		margin: 0;
@@ -57,14 +57,14 @@
 		margin-bottom: 0.5rem;
 		width: 40%;
 		border: none;
-		border-bottom: 2px solid var(--sec);
+		border-bottom: 2px solid var(--guild-container-secondary);
 	}
 
 	&:hover {
 		& > .pill {
 			height: 1.25rem;
 			width: 0.25rem;
-			background-color: var(--pill);
+			background-color: var(--guild-pill);
 		}
 		& > img {
 			border-radius: 35%;
