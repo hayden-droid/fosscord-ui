@@ -1,5 +1,5 @@
 :root {
-  --background: var(--background-tertiary);
+  --bg: var(--background-tertiary);
   --sec: var(--background-primary);
   --pill: var(--text);
 }
@@ -7,7 +7,7 @@
 .guild-container {
   display: flex;
   flex-direction: column;
-  background-color: var(--background);
+  background-color: var(--bg);
   padding-top: 0.5rem;
 }
 
