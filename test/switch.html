@@ -22,7 +22,8 @@
 				padding: 10px 10px;
 				font-size: 10px;
 				color: rgb(148, 148, 148);
-				margin-top: 1.5rem;
+				margin-top: 2.5rem;
+				margin-bottom: 1rem;
 			}
 		</style>
 	</head>
@@ -30,14 +31,97 @@
 	<body>
 		<h1>Switches</h1>
 		<a class="text link" href="./index.html">Home</a>
-		<h3>2 state switch</h3>
-		<i class="icon times"></i>
-		<i class="icon check"></i>
+
+		<h3>Simple on/off switch</h3>
+
+		<label class="switch">
+			<input type="checkbox" />
+			<span class="slider"></span>
+		</label>
+
+		<h3>Simple on/off switch with label</h3>
+		<label class="switch">
+			<p class="label">Label</p>
+			<input type="checkbox" />
+			<span class="slider"></span>
+		</label>
+
+		<h3>Disabled on/off switch</h3>
+		<label class="switch disabled">
+			<p class="label">Label</p>
+			<input type="checkbox" disabled />
+			<span class="slider"></span>
+		</label>
+
+		<h3>Long Table on/off switch</h3>
+		<label class="switch" style="width: 300px">
+			<p class="label">A really really long Label</p>
+			<input type="checkbox" />
+			<span class="slider"></span>
+		</label>
+
 		<h3>3 state switch</h3>
-		<div class="three-state-switch">
-			<i class="icon times switch left"></i>
-			<i class="icon slash switch middle"></i>
-			<i class="icon check switch right"></i>
+		<div class="radio-switch">
+			<label class="deny">
+				<i class="icon times"></i>
+				<input type="checkbox" />
+			</label>
+			<label class="passthrough">
+				<i class="icon slash"></i>
+				<input type="checkbox" />
+			</label>
+			<label class="allow">
+				<i class="icon check"></i>
+				<input type="checkbox" />
+			</label>
+		</div>
+
+		<h3>3 state switch deny</h3>
+		<div class="radio-switch">
+			<label class="deny selected">
+				<i class="icon times"></i>
+				<input type="checkbox" />
+			</label>
+			<label class="passthrough">
+				<i class="icon slash"></i>
+				<input type="checkbox" checked="false" />
+			</label>
+			<label class="allow">
+				<i class="icon check"></i>
+				<input type="checkbox" />
+			</label>
+		</div>
+
+		<h3>3 state passthrough</h3>
+		<div class="radio-switch">
+			<label class="deny">
+				<i class="icon times"></i>
+				<input type="checkbox" />
+			</label>
+			<label class="passthrough selected">
+				<i class="icon slash"></i>
+				<input type="checkbox" />
+			</label>
+			<label class="allow">
+				<i class="icon check"></i>
+				<input type="checkbox" />
+			</label>
+		</div>
+
+		<h3>3 state allow</h3>
+		<div class="radio-switch">
+			<label class="deny">
+				<i class="icon times"></i>
+				<input type="checkbox" />
+			</label>
+			<label class="passthrough">
+				<i class="icon slash"></i>
+				<input type="checkbox" />
+			</label>
+			<label class="allow selected">
+				<i class="icon check"></i>
+				<input type="checkbox" />
+			</label>
 		</div>
 	</body>
 </html>
