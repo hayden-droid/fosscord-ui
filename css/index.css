@@ -10,7 +10,6 @@
   --danger: #f04747;
   --danger-hover: rgba(240, 71, 71, 0.1);
   --warning: #faa61a;
-  --text: #ffffff;
   --background-primary: #36393f;
   --background-secondary: #2f3136;
   --background-tertiary: #202225;
@@ -124,39 +123,39 @@
 }
 
 :root {
-  --BTN-primary-background: var(--primary);
-  --BTN-primary-border: var(--primary);
-  --BTN-primary-color: var(--text);
-  --BTN-primary-hover-background: #677bc4;
-  --BTN-primary-active-background: #5b6eae;
-  --BTN-primary-outline-active-background: var(--primary-hover);
-  --BTN-secondary-background: var(--secondary);
-  --BTN-secondary-border: var(--secondary);
-  --BTN-secondary-color: var(--text);
-  --BTN-secondary-hover-background: #68727f;
-  --BTN-secondary-active-background: #5d6671;
-  --BTN-secondary-outline-active-background: var(--secondary-hover);
-  --BTN-danger-background: var(--danger);
-  --BTN-danger-border: var(--danger);
-  --BTN-danger-color: var(--text);
-  --BTN-danger-hover-background: #d84040;
-  --BTN-danger-active-background: #c03939;
-  --BTN-danger-outline-active-background: var(--danger-hover);
-  --BTN-success-background: var(--success);
-  --BTN-success-border: var(--success);
-  --BTN-success-color: var(--text);
-  --BTN-success-hover-background: #3ca374;
-  --BTN-success-active-background: #35976b;
-  --BTN-success-outline-active-background: var(--success-hover);
-  --BTN-link-background: transparent;
-  --BTN-link-border: transparent;
-  --BTN-link-color: var(--text);
-  --BTN-link-hover-background: transparent;
-  --BTN-focus-color: #00b0f4;
-  --BTN-focus-radius: 3px;
+  --button-primary-background: var(--primary);
+  --button-primary-border: var(--primary);
+  --button-primary-color: var(--text);
+  --button-primary-hover-background: #677bc4;
+  --button-primary-active-background: #5b6eae;
+  --button-primary-outline-active-background: var(--primary-hover);
+  --button-secondary-background: var(--secondary);
+  --button-secondary-border: var(--secondary);
+  --button-secondary-color: var(--text);
+  --button-secondary-hover-background: #68727f;
+  --button-secondary-active-background: #5d6671;
+  --button-secondary-outline-active-background: var(--secondary-hover);
+  --button-danger-background: var(--danger);
+  --button-danger-border: var(--danger);
+  --button-danger-color: var(--text);
+  --button-danger-hover-background: #d84040;
+  --button-danger-active-background: #c03939;
+  --button-danger-outline-active-background: var(--danger-hover);
+  --button-success-background: var(--success);
+  --button-success-border: var(--success);
+  --button-success-color: var(--text);
+  --button-success-hover-background: #3ca374;
+  --button-success-active-background: #35976b;
+  --button-success-outline-active-background: var(--success-hover);
+  --button-link-background: transparent;
+  --button-link-border: transparent;
+  --button-link-color: var(--text);
+  --button-link-hover-background: transparent;
+  --button-focus-color: #00b0f4;
+  --button-focus-radius: 3px;
 }
 
-.btn {
+.button {
   border: 1px solid transparent;
   border-radius: 3px;
   padding: 2px 16px;
@@ -165,104 +164,104 @@
   cursor: pointer;
   transition: border-color 0.17s ease, background-color 0.17s ease, color 0.17s ease;
 }
-.btn:focus {
+.button:focus {
   outline: none;
 }
-.btn.outline {
+.button.outline {
   background-color: transparent;
 }
-.btn.outline:hover {
+.button.outline:hover {
   background-color: transparent;
 }
-.btn.primary {
-  background-color: var(--BTN-primary-background);
-  border-color: var(--BTN-primary-border);
-  color: var(--BTN-primary-color);
+.button.primary {
+  background-color: var(--button-primary-background);
+  border-color: var(--button-primary-border);
+  color: var(--button-primary-color);
 }
-.btn.primary:hover {
-  background-color: var(--BTN-primary-hover-background);
-  border-color: var(--BTN-primary-hover-background);
+.button.primary:hover {
+  background-color: var(--button-primary-hover-background);
+  border-color: var(--button-primary-hover-background);
 }
-.btn.primary:active {
-  background-color: var(--BTN-primary-active-background);
-  border-color: var(--BTN-primary-active-background);
+.button.primary:active {
+  background-color: var(--button-primary-active-background);
+  border-color: var(--button-primary-active-background);
 }
-.btn.primary.outline {
-  color: var(--BTN-primary-background);
+.button.primary.outline {
+  color: var(--button-primary-background);
 }
-.btn.primary.outline:active {
-  background-color: var(--BTN-primary-outline-active-background) !important;
+.button.primary.outline:active {
+  background-color: var(--button-primary-outline-active-background) !important;
 }
-.btn.secondary {
-  background: var(--BTN-secondary-background);
-  border-color: var(--BTN-secondary-border);
-  color: var(--BTN-secondary-color);
+.button.secondary {
+  background: var(--button-secondary-background);
+  border-color: var(--button-secondary-border);
+  color: var(--button-secondary-color);
 }
-.btn.secondary:hover {
-  background-color: var(--BTN-secondary-hover-background);
-  border-color: var(--BTN-secondary-hover-background);
+.button.secondary:hover {
+  background-color: var(--button-secondary-hover-background);
+  border-color: var(--button-secondary-hover-background);
 }
-.btn.secondary:active {
-  background-color: var(--BTN-secondary-active-background);
-  border-color: var(--BTN-secondary-active-background);
+.button.secondary:active {
+  background-color: var(--button-secondary-active-background);
+  border-color: var(--button-secondary-active-background);
 }
-.btn.secondary.outline {
-  color: var(--BTN-secondary-background);
+.button.secondary.outline {
+  color: var(--button-secondary-background);
 }
-.btn.secondary.outline:active {
-  background-color: var(--BTN-secondary-outline-active-background) !important;
+.button.secondary.outline:active {
+  background-color: var(--button-secondary-outline-active-background) !important;
 }
-.btn.danger {
-  background: var(--BTN-danger-background);
-  border-color: var(--BTN-danger-border);
-  color: var(--BTN-danger-color);
+.button.danger {
+  background: var(--button-danger-background);
+  border-color: var(--button-danger-border);
+  color: var(--button-danger-color);
 }
-.btn.danger:hover {
-  background-color: var(--BTN-danger-hover-background);
-  border-color: var(--BTN-danger-hover-background);
+.button.danger:hover {
+  background-color: var(--button-danger-hover-background);
+  border-color: var(--button-danger-hover-background);
 }
-.btn.danger:active {
-  background-color: var(--BTN-danger-active-background);
-  border-color: var(--BTN-danger-active-background);
+.button.danger:active {
+  background-color: var(--button-danger-active-background);
+  border-color: var(--button-danger-active-background);
 }
-.btn.danger.outline {
-  color: var(--BTN-danger-background);
+.button.danger.outline {
+  color: var(--button-danger-background);
 }
-.btn.danger.outline:active {
-  background-color: var(--BTN-danger-outline-active-background) !important;
+.button.danger.outline:active {
+  background-color: var(--button-danger-outline-active-background) !important;
 }
-.btn.success {
-  background: var(--BTN-success-background);
-  border-color: var(--BTN-success-border);
-  color: var(--BTN-success-color);
+.button.success {
+  background: var(--button-success-background);
+  border-color: var(--button-success-border);
+  color: var(--button-success-color);
 }
-.btn.success:hover {
-  background-color: var(--BTN-success-hover-background);
-  border-color: var(--BTN-success-hover-background);
+.button.success:hover {
+  background-color: var(--button-success-hover-background);
+  border-color: var(--button-success-hover-background);
 }
-.btn.success:active {
-  background-color: var(--BTN-success-active-background);
-  border-color: var(--BTN-success-active-background);
+.button.success:active {
+  background-color: var(--button-success-active-background);
+  border-color: var(--button-success-active-background);
 }
-.btn.success.outline {
-  color: var(--BTN-success-background);
+.button.success.outline {
+  color: var(--button-success-background);
 }
-.btn.success.outline:active {
-  background-color: var(--BTN-success-outline-active-background) !important;
+.button.success.outline:active {
+  background-color: var(--button-success-outline-active-background) !important;
 }
-.btn.link {
-  background: var(--BTN-link-background);
-  border-color: var(--BTN-link-border);
-  color: var(--BTN-link-color);
+.button.link {
+  background: var(--button-link-background);
+  border-color: var(--button-link-border);
+  color: var(--button-link-color);
 }
-.btn.link:hover {
-  background-color: var(--BTN-link-hover-background);
+.button.link:hover {
+  background-color: var(--button-link-hover-background);
   text-decoration: underline;
 }
-.btn.outline {
+.button.outline {
   background-color: initial;
 }
-.btn.outline:hover {
+.button.outline:hover {
   background-color: initial;
 }
 
@@ -320,49 +319,69 @@ i.icon.size-3 {
 }
 
 :root {
-  --TEXT-default: #dcddde;
-  --TEXT-secondary: #b9bbbe;
-  --TEXT-title: #8e9297;
-  --TEXT-link: #00b0f4;
-  --TEXT-anchor: #ffffff;
-  --TEXT-muted: #72767d;
+  --text-default: #dcddde;
+  --text-size: 16px;
+  --text-secondary: #b9bbbe;
+  --text-title: #8e9297;
+  --text-link: #00b0f4;
+  --text-anchor: #ffffff;
+  --text-muted: #72767d;
+  --text-success: var(--success);
+  --text-danger: var(--danger);
+  --text-warning: var(--warning);
 }
 
 p {
   margin: 0;
 }
 
-.text.default {
-  font-size: 1rem;
-  color: var(--TEXT-default);
+.text {
+  font-size: var(--text-size);
+  color: var(--text-default);
 }
 .text.secondary {
-  font-size: 14px;
   font-weight: 400;
-  color: var(--TEXT-secondary);
+  color: var(--text-secondary);
 }
 .text.muted {
   font-size: 0.75rem;
-  color: var(--TEXT-muted);
+  color: var(--text-muted);
 }
 .text.title {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--TEXT-title);
+  color: var(--text-title);
 }
-.text.link {
-  color: var(--TEXT-link);
-  text-decoration: none;
+.text.danger {
+  color: var(--text-danger);
 }
-.text.link:hover {
-  text-decoration: underline;
+.text.warning {
+  color: var(--text-warning);
+}
+.text.success {
+  color: var(--text-success);
 }
 .text.anchor {
-  color: var(--TEXT-anchor);
+  color: var(--text-anchor);
   text-decoration: none;
 }
 .text.anchor:hover {
+  text-decoration: underline;
+}
+.text.headline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.text.link,
+a {
+  color: var(--text-link);
+  text-decoration: none;
+}
+.text.link:hover,
+a:hover {
   text-decoration: underline;
 }
 
@@ -520,127 +539,35 @@ h3 {
   background-color: var(--LIST-success-color);
 }
 
-.single-input {
+.input-wrapper {
+  margin-top: 20px;
+  display: block;
+}
+.input-wrapper .label {
+  margin-bottom: 8px;
+}
+.input-wrapper .input {
   background-color: rgba(0, 0, 0, 0.1);
-  border-color: rgba(0, 0, 0, 0.3);
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-image-outset: 0;
-  border-image-repeat: stretch;
-  border-image-slice: 100%;
-  border-image-source: none;
-  border-image-width: 1;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  box-sizing: border-box;
-  color: #dcddde;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: var(--text-default);
   display: block;
   font-size: 16px;
-  font-stretch: 100%;
-  font-style: normal;
   font-weight: 400;
-  height: 40px;
-  letter-spacing: normal;
-  line-height: normal;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
+  margin: 0;
   outline-style: none;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  text-align: start;
-  text-shadow: none;
-  text-transform: none;
-  user-select: none;
+  padding: 10px;
   width: 600px;
-  word-spacing: 0px;
-  writing-mode: horizontal-tb;
   transition: border-color 0.2s ease-in-out;
-}
-.single-input:focus {
-  border-color: #7289da;
-}
-
-.textarea-input {
-  background-color: rgba(0, 0, 0, 0.1);
-  border-color: rgba(0, 0, 0, 0.3);
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-image-outset: 0;
-  border-image-repeat: stretch;
-  border-image-slice: 100%;
-  border-image-source: none;
-  border-image-width: 1;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  box-sizing: border-box;
-  color: #dcddde;
-  cursor: text;
-  display: inline-block;
-  flex-direction: column;
   font-family: sans-serif;
-  font-size: 16px;
-  font-stretch: 100%;
-  font-style: normal;
-  font-variant-caps: normal;
-  font-variant-east-asian: normal;
-  font-variant-ligatures: normal;
-  font-variant-numeric: normal;
-  font-weight: 400;
-  height: 84.4px;
-  letter-spacing: normal;
-  line-height: normal;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
-  outline-color: #dcddde;
-  outline-style: none;
-  outline-width: 0px;
-  overflow-wrap: break-word;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 31.69px;
-  padding-top: 10px;
-  resize: none;
-  text-align: start;
-  text-indent: 0px;
-  text-rendering: optimizelegibility;
-  text-shadow: none;
-  text-transform: none;
-  transition-delay: 0s;
-  transition-duration: 0.2s;
-  transition-property: border-color;
-  transition-timing-function: ease-in-out;
-  user-select: none;
-  white-space: pre-wrap;
-  width: 602.6px;
-  word-spacing: 0px;
-  writing-mode: horizontal-tb;
-  -webkit-appearance: none;
-  -webkit-box-direction: normal;
 }
-.textarea-input:focus {
-  border-color: #7289da;
+.input-wrapper .input:focus {
+  border-color: var(--primary);
+}
+.input-wrapper .input.textarea {
+  resize: none;
+  height: 84.4px;
+  padding-right: 31.69px;
 }
 
 :root {
