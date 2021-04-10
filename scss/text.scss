@@ -1,10 +1,14 @@
 :root {
-	--TEXT-default: #dcddde;
-	--TEXT-secondary: #b9bbbe;
-	--TEXT-title: #8e9297;
-	--TEXT-link: #00b0f4;
-	--TEXT-anchor: #ffffff;
-	--TEXT-muted: #72767d;
+	--text-default: #dcddde;
+	--text-size: 16px;
+	--text-secondary: #b9bbbe;
+	--text-title: #8e9297;
+	--text-link: #00b0f4;
+	--text-anchor: #ffffff;
+	--text-muted: #72767d;
+	--text-success: var(--success);
+	--text-danger: var(--danger);
+	--text-warning: var(--warning);
 }
 
 p {
@@ -12,45 +16,61 @@ p {
 }
 
 .text {
-	&.default {
-		font-size: 1rem;
-		color: var(--TEXT-default);
-	}
+	font-size: var(--text-size);
+	color: var(--text-default);
 
 	&.secondary {
-		font-size: 14px;
 		font-weight: 400;
-		color: var(--TEXT-secondary);
+		color: var(--text-secondary);
 	}
 
 	&.muted {
 		font-size: 0.75rem;
-		color: var(--TEXT-muted);
+		color: var(--text-muted);
 	}
 
 	&.title {
 		font-size: 12px;
 		font-weight: 700;
 		text-transform: uppercase;
-		color: var(--TEXT-title);
+		color: var(--text-title);
 	}
 
-	&.link {
-		color: var(--TEXT-link);
-		text-decoration: none;
+	&.danger {
+		color: var(--text-danger);
+	}
 
-		&:hover {
-			text-decoration: underline;
-		}
+	&.warning {
+		color: var(--text-warning);
+	}
+
+	&.success {
+		color: var(--text-success);
 	}
 
 	&.anchor {
-		color: var(--TEXT-anchor);
+		color: var(--text-anchor);
 		text-decoration: none;
 
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+
+	&.headline {
+		font-size: 1.5rem;
+		font-weight: 600;
+		margin-bottom: 8px;
+	}
+}
+
+.text.link,
+a {
+	color: var(--text-link);
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
 	}
 }
 
