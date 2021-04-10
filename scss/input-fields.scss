@@ -11,10 +11,10 @@
 	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
-}
 
-.label {
-	margin-bottom: var(--element-margin);
+	.label {
+		margin-bottom: var(--element-margin);
+	}
 }
 
 .input {

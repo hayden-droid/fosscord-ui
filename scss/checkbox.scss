@@ -1,15 +1,18 @@
 :root {
 	--checkbox-active: var(--primary);
+	--checkbox-size: 25px;
 }
 
 .checkbox {
-	display: block;
+	display: flex;
+	align-items: center;
 	position: relative;
 	padding-left: 35px;
 	margin-bottom: 12px;
 	cursor: pointer;
 	font-size: 22px;
 	user-select: none;
+	height: var(--checkbox-size);
 
 	input {
 		position: absolute;
@@ -28,12 +31,20 @@
 		}
 	}
 
+	.label {
+		font-size: var(--text-size);
+	}
+
+	&.disabled {
+		cursor: no-drop;
+	}
+
 	.checkmark {
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: 25px;
-		width: 25px;
+		height: var(--checkbox-size);
+		width: var(--checkbox-size);
 		display: flex;
 		justify-content: center;
 		align-items: center;
