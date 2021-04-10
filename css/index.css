@@ -793,12 +793,14 @@ h3 {
   --switch-off: var(--danger);
   --switch-on: var(--success);
   --switch-icon-selected: var(--text-default);
+  --switch-width: 60px;
+  --switch-slider-size: 26px;
 }
 
 .switch {
   position: relative;
   display: inline-block;
-  min-width: 60px;
+  min-width: var(--switch-width);
   cursor: pointer;
 }
 .switch.disabled {
@@ -810,10 +812,20 @@ h3 {
   width: 0;
   height: 0;
 }
-.switch input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+.switch input:checked + .slider {
+  background-color: var(--switch-on);
+}
+.switch input:checked + .slider:before,
+.switch input:checked + .slider .icon {
+  transform: translateX(var(--switch-slider-size));
+}
+.switch input:checked + .slider .off {
+  opacity: 0;
+  transform: scale(0) translateX(var(--switch-slider-size));
+}
+.switch input:checked + .slider .on {
+  opacity: 1;
+  transform: scale(1) translateX(var(--switch-slider-size));
 }
 .switch input:disabled + .slider {
   opacity: 0.3;
@@ -826,35 +838,43 @@ h3 {
 .switch .slider {
   position: absolute;
   cursor: pointer;
-  width: 60px;
+  width: var(--switch-width);
   height: 34px;
   right: 0;
   top: 0;
   display: block;
   background-color: var(--background-inactive);
-  -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 34px;
 }
-.switch .slider:before {
-  border-radius: 50%;
+.switch .slider .icon {
+  position: absolute;
+  transition: 0.4s;
+  height: 15px;
+  width: 15px;
+  top: 9.5px;
+  left: 9.5px;
+}
+.switch .slider .off {
+  color: var(--background-inactive);
+  transform: none;
+}
+.switch .slider .on {
+  opacity: 0;
+  color: var(--switch-on);
+  transform: scale(0);
 }
 .switch .slider:before {
+  border-radius: 50%;
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: var(--switch-slider-size);
+  width: var(--switch-slider-size);
   left: 4px;
   bottom: 4px;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-}
-.switch input:checked + .slider {
-  background-color: var(--switch-on);
-}
-.switch input:focus + .slider {
-  box-shadow: 0 0 1px var(--switch-on);
 }
 
 .radio-switch {
