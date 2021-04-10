@@ -2,10 +2,12 @@
   margin-top: 20px;
   display: block;
 }
-.input-wrapper .label {
+
+.label {
   margin-bottom: 8px;
 }
-.input-wrapper .input {
+
+.input {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -20,10 +22,10 @@
   transition: border-color 0.2s ease-in-out;
   font-family: sans-serif;
 }
-.input-wrapper .input:focus {
+.input:focus {
   border-color: var(--primary);
 }
-.input-wrapper .input.textarea {
+.input.textarea {
   resize: none;
   height: 84.4px;
   padding-right: 31.69px;
