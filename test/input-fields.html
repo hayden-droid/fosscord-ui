@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="../css/input-fields.css" />
+		<link rel="stylesheet" href="../css/index.css" />
 
 		<title>Discord CSS Framwork - Input fields</title>
 		<style>
@@ -22,20 +22,15 @@
 	<body>
 		<h1>Input Fields</h1>
 		<a class="text link" href="./index.html"> Home</a>
-		<h3>.single-input</h3>
-		<div>
-			<input class="single-input" placeholder="Input Placeholder" maxlength="100" name="" type="text" value="" />
-		</div>
+		<h3>.input</h3>
+		<label class="input-wrapper">
+			<p class="label title text">Label</p>
+			<input class="input" placeholder="Input Placeholder" name="" type="text" value="" />
+		</label>
 		<br />
-		<h3>.textarea-input</h3>
+		<h3>.input</h3>
 		<div>
-			<textarea
-				type="text"
-				class="textarea-input"
-				placeholder="Textarea placeholder"
-				maxlength="120"
-				rows="3"
-			></textarea>
+			<textarea type="text" class="input textarea" placeholder="Textarea placeholder" rows="3"></textarea>
 		</div>
 		<br />
 	</body>
