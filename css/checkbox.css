@@ -1,0 +1,47 @@
+:root {
+  --checkbox-active: var(--primary);
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkbox input:checked ~ .checkmark {
+  background-color: var(--checkbox-active);
+  border-color: var(--primary);
+}
+.checkbox input:checked ~ .checkmark .icon {
+  display: block;
+}
+.checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  border: 0.1px solid var(--background-inactive);
+}
+.checkbox .checkmark .icon {
+  display: none;
+  color: var(--text-default);
+  width: 15px;
+  height: 15px;
+}
+
+/*# sourceMappingURL=checkbox.css.map */
