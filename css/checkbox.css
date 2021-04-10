@@ -30,6 +30,7 @@
 }
 .checkbox .label {
   font-size: var(--text-size);
+  color: var(--text-secondary);
 }
 .checkbox.disabled {
   cursor: no-drop;
