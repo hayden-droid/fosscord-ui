@@ -1,42 +1,42 @@
 :root {
 	// Primary btn
-	--BTN-primary-background: var(--primary);
-	--BTN-primary-border: var(--primary);
-	--BTN-primary-color: var(--text);
-	--BTN-primary-hover-background: #677bc4;
-	--BTN-primary-active-background: #5b6eae;
-	--BTN-primary-outline-active-background: var(--primary-hover);
+	--button-primary-background: var(--primary);
+	--button-primary-border: var(--primary);
+	--button-primary-color: var(--text);
+	--button-primary-hover-background: #677bc4;
+	--button-primary-active-background: #5b6eae;
+	--button-primary-outline-active-background: var(--primary-hover);
 	// secondary btn
-	--BTN-secondary-background: var(--secondary);
-	--BTN-secondary-border: var(--secondary);
-	--BTN-secondary-color: var(--text);
-	--BTN-secondary-hover-background: #68727f;
-	--BTN-secondary-active-background: #5d6671;
-	--BTN-secondary-outline-active-background: var(--secondary-hover);
+	--button-secondary-background: var(--secondary);
+	--button-secondary-border: var(--secondary);
+	--button-secondary-color: var(--text);
+	--button-secondary-hover-background: #68727f;
+	--button-secondary-active-background: #5d6671;
+	--button-secondary-outline-active-background: var(--secondary-hover);
 	// danger btn
-	--BTN-danger-background: var(--danger);
-	--BTN-danger-border: var(--danger);
-	--BTN-danger-color: var(--text);
-	--BTN-danger-hover-background: #d84040;
-	--BTN-danger-active-background: #c03939;
-	--BTN-danger-outline-active-background: var(--danger-hover);
+	--button-danger-background: var(--danger);
+	--button-danger-border: var(--danger);
+	--button-danger-color: var(--text);
+	--button-danger-hover-background: #d84040;
+	--button-danger-active-background: #c03939;
+	--button-danger-outline-active-background: var(--danger-hover);
 	// success btn
-	--BTN-success-background: var(--success);
-	--BTN-success-border: var(--success);
-	--BTN-success-color: var(--text);
-	--BTN-success-hover-background: #3ca374;
-	--BTN-success-active-background: #35976b;
-	--BTN-success-outline-active-background: var(--success-hover);
+	--button-success-background: var(--success);
+	--button-success-border: var(--success);
+	--button-success-color: var(--text);
+	--button-success-hover-background: #3ca374;
+	--button-success-active-background: #35976b;
+	--button-success-outline-active-background: var(--success-hover);
 	// Link btn
-	--BTN-link-background: transparent;
-	--BTN-link-border: transparent;
-	--BTN-link-color: var(--text);
-	--BTN-link-hover-background: transparent;
-	--BTN-focus-color: #00b0f4;
-	--BTN-focus-radius: 3px;
+	--button-link-background: transparent;
+	--button-link-border: transparent;
+	--button-link-color: var(--text);
+	--button-link-hover-background: transparent;
+	--button-focus-color: #00b0f4;
+	--button-focus-radius: 3px;
 }
 
-.btn {
+.button {
 	border: 1px solid transparent;
 	border-radius: 3px;
 	padding: 2px 16px;
@@ -50,7 +50,7 @@
 		// TODO: Nur wenn mit `tab` getabt wird:
 		// TODO: padding zwischen outline und box
 		// box-shadow anstatt outline -> runde outline box
-		// box-shadow: 0px 0px 0px var(--BTN-focus-radius) var(--BTN-focus-color);
+		// box-shadow: 0px 0px 0px var(--button-focus-radius) var(--button-focus-color);
 	}
 
 	&.outline {
@@ -62,108 +62,108 @@
 	}
 
 	&.primary {
-		background-color: var(--BTN-primary-background);
-		border-color: var(--BTN-primary-border);
-		color: var(--BTN-primary-color);
+		background-color: var(--button-primary-background);
+		border-color: var(--button-primary-border);
+		color: var(--button-primary-color);
 
 		&:hover {
-			background-color: var(--BTN-primary-hover-background);
-			border-color: var(--BTN-primary-hover-background);
+			background-color: var(--button-primary-hover-background);
+			border-color: var(--button-primary-hover-background);
 		}
 
 		&:active {
-			background-color: var(--BTN-primary-active-background);
-			border-color: var(--BTN-primary-active-background);
+			background-color: var(--button-primary-active-background);
+			border-color: var(--button-primary-active-background);
 		}
 
 		&.outline {
-			color: var(--BTN-primary-background);
+			color: var(--button-primary-background);
 
 			&:active {
-				background-color: var(--BTN-primary-outline-active-background) !important;
+				background-color: var(--button-primary-outline-active-background) !important;
 			}
 		}
 	}
 
 	&.secondary {
-		background: var(--BTN-secondary-background);
-		border-color: var(--BTN-secondary-border);
-		color: var(--BTN-secondary-color);
+		background: var(--button-secondary-background);
+		border-color: var(--button-secondary-border);
+		color: var(--button-secondary-color);
 
 		&:hover {
-			background-color: var(--BTN-secondary-hover-background);
-			border-color: var(--BTN-secondary-hover-background);
+			background-color: var(--button-secondary-hover-background);
+			border-color: var(--button-secondary-hover-background);
 		}
 
 		&:active {
-			background-color: var(--BTN-secondary-active-background);
-			border-color: var(--BTN-secondary-active-background);
+			background-color: var(--button-secondary-active-background);
+			border-color: var(--button-secondary-active-background);
 		}
 
 		&.outline {
-			color: var(--BTN-secondary-background);
+			color: var(--button-secondary-background);
 
 			&:active {
-				background-color: var(--BTN-secondary-outline-active-background) !important;
+				background-color: var(--button-secondary-outline-active-background) !important;
 			}
 		}
 	}
 
 	&.danger {
-		background: var(--BTN-danger-background);
-		border-color: var(--BTN-danger-border);
-		color: var(--BTN-danger-color);
+		background: var(--button-danger-background);
+		border-color: var(--button-danger-border);
+		color: var(--button-danger-color);
 
 		&:hover {
-			background-color: var(--BTN-danger-hover-background);
-			border-color: var(--BTN-danger-hover-background);
+			background-color: var(--button-danger-hover-background);
+			border-color: var(--button-danger-hover-background);
 		}
 
 		&:active {
-			background-color: var(--BTN-danger-active-background);
-			border-color: var(--BTN-danger-active-background);
+			background-color: var(--button-danger-active-background);
+			border-color: var(--button-danger-active-background);
 		}
 
 		&.outline {
-			color: var(--BTN-danger-background);
+			color: var(--button-danger-background);
 
 			&:active {
-				background-color: var(--BTN-danger-outline-active-background) !important;
+				background-color: var(--button-danger-outline-active-background) !important;
 			}
 		}
 	}
 
 	&.success {
-		background: var(--BTN-success-background);
-		border-color: var(--BTN-success-border);
-		color: var(--BTN-success-color);
+		background: var(--button-success-background);
+		border-color: var(--button-success-border);
+		color: var(--button-success-color);
 
 		&:hover {
-			background-color: var(--BTN-success-hover-background);
-			border-color: var(--BTN-success-hover-background);
+			background-color: var(--button-success-hover-background);
+			border-color: var(--button-success-hover-background);
 		}
 
 		&:active {
-			background-color: var(--BTN-success-active-background);
-			border-color: var(--BTN-success-active-background);
+			background-color: var(--button-success-active-background);
+			border-color: var(--button-success-active-background);
 		}
 
 		&.outline {
-			color: var(--BTN-success-background);
+			color: var(--button-success-background);
 
 			&:active {
-				background-color: var(--BTN-success-outline-active-background) !important;
+				background-color: var(--button-success-outline-active-background) !important;
 			}
 		}
 	}
 
 	&.link {
-		background: var(--BTN-link-background);
-		border-color: var(--BTN-link-border);
-		color: var(--BTN-link-color);
+		background: var(--button-link-background);
+		border-color: var(--button-link-border);
+		color: var(--button-link-color);
 
 		&:hover {
-			background-color: var(--BTN-link-hover-background);
+			background-color: var(--button-link-hover-background);
 			text-decoration: underline;
 		}
 	}
