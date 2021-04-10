@@ -1,31 +1,33 @@
 :root {
+  --button-font-size: 16px;
+  --button-font-weight: 500;
   --button-primary-background: var(--primary);
   --button-primary-border: var(--primary);
-  --button-primary-color: var(--text);
+  --button-primary-color: var(--text-default);
   --button-primary-hover-background: #677bc4;
   --button-primary-active-background: #5b6eae;
   --button-primary-outline-active-background: var(--primary-hover);
   --button-secondary-background: var(--secondary);
   --button-secondary-border: var(--secondary);
-  --button-secondary-color: var(--text);
+  --button-secondary-color: var(--text-default);
   --button-secondary-hover-background: #68727f;
   --button-secondary-active-background: #5d6671;
   --button-secondary-outline-active-background: var(--secondary-hover);
   --button-danger-background: var(--danger);
   --button-danger-border: var(--danger);
-  --button-danger-color: var(--text);
+  --button-danger-color: var(--text-default);
   --button-danger-hover-background: #d84040;
   --button-danger-active-background: #c03939;
   --button-danger-outline-active-background: var(--danger-hover);
   --button-success-background: var(--success);
   --button-success-border: var(--success);
-  --button-success-color: var(--text);
+  --button-success-color: var(--text-default);
   --button-success-hover-background: #3ca374;
   --button-success-active-background: #35976b;
   --button-success-outline-active-background: var(--success-hover);
   --button-link-background: transparent;
   --button-link-border: transparent;
-  --button-link-color: var(--text);
+  --button-link-color: var(--text-default);
   --button-link-hover-background: transparent;
   --button-focus-color: #00b0f4;
   --button-focus-radius: 3px;
@@ -39,6 +41,8 @@
   min-height: 32px;
   cursor: pointer;
   transition: border-color 0.17s ease, background-color 0.17s ease, color 0.17s ease;
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
 }
 .button:focus {
   outline: none;

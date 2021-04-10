@@ -1,7 +1,7 @@
 :root {
   --slider-background: var(--background-shade);
   --slider-active-background: var(--primary);
-  --slider-pill-background: var(--text);
+  --slider-pill-background: var(--text-default);
 }
 
 .slider {

@@ -16,8 +16,9 @@
   --background-shade: #4f545c;
   --background-floating: #18191c;
   --interactive: #b9bbbe;
-  --interactive-active: var(--text);
+  --interactive-active: var(--text-default);
   --interactive-hover: #dcddde;
+  --element-margin: 8px;
 }
 
 .disabled,
@@ -40,6 +41,10 @@
 }
 .visibleOnHover:hover {
   opacity: 1;
+}
+
+.marginHeight {
+  margin: var(--element-margin) 0;
 }
 
 /*# sourceMappingURL=general.css.map */

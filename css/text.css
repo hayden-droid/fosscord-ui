@@ -3,7 +3,7 @@
   --text-size: 16px;
   --text-secondary: #b9bbbe;
   --text-title: #8e9297;
-  --text-link: #00b0f4;
+  --text-link: var(--primary);
   --text-anchor: #ffffff;
   --text-muted: #72767d;
   --text-success: var(--success);
@@ -52,13 +52,14 @@ p {
 .text.headline {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: --element-margin;
 }
 
 .text.link,
 a {
   color: var(--text-link);
   text-decoration: none;
+  font-weight: 500;
 }
 .text.link:hover,
 a:hover {

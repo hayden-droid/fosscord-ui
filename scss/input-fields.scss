@@ -1,24 +1,35 @@
+:root {
+	--input-radius: 3px;
+	--input-background: rgba(0, 0, 0, 0.1);
+	--input-color: var(--text-default);
+	--input-font-size: 16px;
+	--input-font-weight: 400;
+	--input-padding: 10px;
+}
+
 .input-wrapper {
 	margin-top: 20px;
-	display: block;
+	display: flex;
+	flex-direction: column;
 }
 
 .label {
-	margin-bottom: 8px;
+	margin-bottom: var(--element-margin);
 }
 
 .input {
-	background-color: rgba(0, 0, 0, 0.1);
-	border-radius: 3px;
+	background-color: var(--input-background);
+	border-radius: var(--input-radius);
 	border: 1px solid rgba(0, 0, 0, 0.3);
-	color: var(--text-default);
+	color: var(--input-color);
 	display: block;
-	font-size: 16px;
-	font-weight: 400;
+	font-size: var(--input-font-size);
+	font-weight: var(--input-font-weight);
 	margin: 0;
 	outline-style: none;
-	padding: 10px;
-	width: 600px;
+	padding: var(--input-padding);
+	width: calc(100% - var(--input-padding) * 2);
+	max-width: 600px;
 	transition: border-color 0.2s ease-in-out;
 	font-family: sans-serif;
 

@@ -16,8 +16,9 @@
   --background-shade: #4f545c;
   --background-floating: #18191c;
   --interactive: #b9bbbe;
-  --interactive-active: var(--text);
+  --interactive-active: var(--text-default);
   --interactive-hover: #dcddde;
+  --element-margin: 8px;
 }
 
 .disabled,
@@ -42,10 +43,14 @@
   opacity: 1;
 }
 
+.marginHeight {
+  margin: var(--element-margin) 0;
+}
+
 :root {
   --guild-container-background: var(--background-tertiary);
   --guild-container-secondary: var(--background-primary);
-  --guild-pill: var(--text);
+  --guild-pill: var(--text-default);
 }
 
 .guild-container {
@@ -123,33 +128,35 @@
 }
 
 :root {
+  --button-font-size: 16px;
+  --button-font-weight: 500;
   --button-primary-background: var(--primary);
   --button-primary-border: var(--primary);
-  --button-primary-color: var(--text);
+  --button-primary-color: var(--text-default);
   --button-primary-hover-background: #677bc4;
   --button-primary-active-background: #5b6eae;
   --button-primary-outline-active-background: var(--primary-hover);
   --button-secondary-background: var(--secondary);
   --button-secondary-border: var(--secondary);
-  --button-secondary-color: var(--text);
+  --button-secondary-color: var(--text-default);
   --button-secondary-hover-background: #68727f;
   --button-secondary-active-background: #5d6671;
   --button-secondary-outline-active-background: var(--secondary-hover);
   --button-danger-background: var(--danger);
   --button-danger-border: var(--danger);
-  --button-danger-color: var(--text);
+  --button-danger-color: var(--text-default);
   --button-danger-hover-background: #d84040;
   --button-danger-active-background: #c03939;
   --button-danger-outline-active-background: var(--danger-hover);
   --button-success-background: var(--success);
   --button-success-border: var(--success);
-  --button-success-color: var(--text);
+  --button-success-color: var(--text-default);
   --button-success-hover-background: #3ca374;
   --button-success-active-background: #35976b;
   --button-success-outline-active-background: var(--success-hover);
   --button-link-background: transparent;
   --button-link-border: transparent;
-  --button-link-color: var(--text);
+  --button-link-color: var(--text-default);
   --button-link-hover-background: transparent;
   --button-focus-color: #00b0f4;
   --button-focus-radius: 3px;
@@ -163,6 +170,8 @@
   min-height: 32px;
   cursor: pointer;
   transition: border-color 0.17s ease, background-color 0.17s ease, color 0.17s ease;
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
 }
 .button:focus {
   outline: none;
@@ -323,7 +332,7 @@ i.icon.size-3 {
   --text-size: 16px;
   --text-secondary: #b9bbbe;
   --text-title: #8e9297;
-  --text-link: #00b0f4;
+  --text-link: var(--primary);
   --text-anchor: #ffffff;
   --text-muted: #72767d;
   --text-success: var(--success);
@@ -372,13 +381,14 @@ p {
 .text.headline {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: --element-margin;
 }
 
 .text.link,
 a {
   color: var(--text-link);
   text-decoration: none;
+  font-weight: 500;
 }
 .text.link:hover,
 a:hover {
@@ -539,27 +549,38 @@ h3 {
   background-color: var(--LIST-success-color);
 }
 
+:root {
+  --input-radius: 3px;
+  --input-background: rgba(0, 0, 0, 0.1);
+  --input-color: var(--text-default);
+  --input-font-size: 16px;
+  --input-font-weight: 400;
+  --input-padding: 10px;
+}
+
 .input-wrapper {
   margin-top: 20px;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .label {
-  margin-bottom: 8px;
+  margin-bottom: var(--element-margin);
 }
 
 .input {
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
+  background-color: var(--input-background);
+  border-radius: var(--input-radius);
   border: 1px solid rgba(0, 0, 0, 0.3);
-  color: var(--text-default);
+  color: var(--input-color);
   display: block;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: var(--input-font-size);
+  font-weight: var(--input-font-weight);
   margin: 0;
   outline-style: none;
-  padding: 10px;
-  width: 600px;
+  padding: var(--input-padding);
+  width: calc(100% - var(--input-padding) * 2);
+  max-width: 600px;
   transition: border-color 0.2s ease-in-out;
   font-family: sans-serif;
 }
@@ -575,7 +596,7 @@ h3 {
 :root {
   --slider-background: var(--background-shade);
   --slider-active-background: var(--primary);
-  --slider-pill-background: var(--text);
+  --slider-pill-background: var(--text-default);
 }
 
 .slider {
