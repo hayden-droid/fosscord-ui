@@ -1,51 +1,63 @@
 :root {
-  --dropdown-background: rgba(0, 0, 0, 0.1);
+  --dropdown-background: var(--background-secondary);
   --dropdown-padding: 8px;
+  --dropdown-border-radius: 4px;
 }
 
 .dropdown {
   background: var(--dropdown-background);
-  border-radius: 4px;
+  border-radius: var(--dropdown-border-radius);
   user-select: none;
+  position: relative;
 }
 .dropdown.open {
   border: 1px solid var(--background-tertiary);
 }
 .dropdown.open .control {
   border: none;
-  border-bottom: 1px solid var(--background-tertiary);
 }
-.dropdown .item {
+.dropdown > .item,
+.dropdown .menu > .item {
   display: flex;
-  min-height: 40px;
+  min-height: 38px;
   padding: var(--dropdown-padding);
   cursor: pointer;
 }
-.dropdown .item:hover {
+.dropdown > .item:hover,
+.dropdown .menu > .item:hover {
   background: rgba(0, 0, 0, 0.1);
 }
-.dropdown .item.selected {
+.dropdown > .item.selected,
+.dropdown .menu > .item.selected {
   background: var(--background-tertiary);
 }
-.dropdown .item .left {
+.dropdown > .item .left,
+.dropdown .menu > .item .left {
   flex-grow: 1;
 }
-.dropdown .item .icon {
+.dropdown > .item .icon,
+.dropdown .menu > .item .icon {
   --size: 16px;
   color: var(--text-muted);
 }
-.dropdown .item .name {
+.dropdown > .item .name,
+.dropdown .menu > .item .name {
   color: var(--text-default);
 }
-.dropdown .item span, .dropdown .item {
+.dropdown > .item span, .dropdown > .item,
+.dropdown .menu > .item span,
+.dropdown .menu > .item {
   display: flex;
   align-items: center;
 }
-.dropdown .item span > *, .dropdown .item > * {
+.dropdown > .item span > *, .dropdown > .item > *,
+.dropdown .menu > .item span > *,
+.dropdown .menu > .item > * {
   margin: 0 0.2rem;
 }
 .dropdown .control {
   border: 1px solid var(--background-tertiary);
+  border-radius: var(--dropdown-border-radius);
 }
 .dropdown .control:hover {
   background: none;
@@ -56,6 +68,14 @@
 .dropdown .menu {
   display: none;
   box-shadow: rgba(32, 34, 37, 0.5) 0px 1px 5px 0px;
+  position: absolute;
+  width: 100%;
+  background: var(--dropdown-background);
+  border: 1px solid var(--background-tertiary);
+  border-radius: var(--dropdown-border-radius);
+  overflow: hidden;
+  border-top-left-radius: none;
+  border-top-right-radius: none;
 }
 
 /*# sourceMappingURL=dropdown.css.map */
