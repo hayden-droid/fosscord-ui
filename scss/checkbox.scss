@@ -12,7 +12,7 @@
 	cursor: pointer;
 	font-size: 22px;
 	user-select: none;
-	height: var(--checkbox-size);
+	min-height: var(--checkbox-size);
 
 	input {
 		position: absolute;
@@ -23,7 +23,7 @@
 
 		&:checked ~ .checkmark {
 			background-color: var(--checkbox-active);
-			border-color: var(--primary);
+			border-color: var(--checkbox-active);
 
 			.icon {
 				display: block;
@@ -55,8 +55,7 @@
 		.icon {
 			display: none;
 			color: var(--text-default);
-			width: 15px;
-			height: 15px;
+			--size: 15px;
 		}
 	}
 }

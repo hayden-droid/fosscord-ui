@@ -10,60 +10,63 @@ i.icon {
 	-webkit-mask-position: center;
 	mask-repeat: no-repeat;
 	mask-position: center;
+	width: var(--size);
+	height: var(--size);
 
 	path {
 		fill: currentColor;
 	}
 
 	&.size-half {
-		width: 15px;
-		height: 15px;
+		--size: 15px;
 	}
 
 	&.size-1,
 	& {
-		width: 25px;
-		height: 25px;
+		--size: 25px;
 	}
 
 	&.size-2 {
-		width: 50px;
-		height: 50px;
+		--size: 50px;
 	}
 
 	&.size-3 {
-		width: 75px;
-		height: 75px;
+		--size: 75px;
 	}
-}
 
-.settings {
-	-webkit-mask-image: url(../icons/solid/cog.svg);
-	mask-image: url(../icons/solid/cog.svg);
-}
+	&.settings {
+		-webkit-mask-image: url(../icons/solid/cog.svg);
+		mask-image: url(../icons/solid/cog.svg);
+	}
 
-.voice-chat {
-	-webkit-mask-image: url(../icons/solid/volume-up.svg);
-	mask-image: url(../icons/solid/volume-up.svg);
-}
+	&.voice-chat {
+		-webkit-mask-image: url(../icons/solid/volume-up.svg);
+		mask-image: url(../icons/solid/volume-up.svg);
+	}
 
-.chevron-down {
-	-webkit-mask-image: url(../icons/solid/chevron-down.svg);
-	mask-image: url(../icons/solid/chevron-down.svg);
-}
-.mobile-alt {
-	-webkit-mask-image: url(../icons/solid/mobile-alt.svg);
-	mask-image: url(../icons/solid/mobile-alt.svg);
-}
-.check {
-	-webkit-mask-image: url(../icons/solid/check.svg);
-	mask-image: url(../icons/solid/check.svg);
-}
-.times {
-	-webkit-mask-image: url(../icons/solid/times.svg);
-	mask-image: url(../icons/solid/times.svg);
-}
-.slash {
-	-webkit-mask-image: url(../icons/solid/slash.svg);
-	mask-image: url(../icons/solid/slash.svg);
+	&.chevron-down {
+		-webkit-mask-image: url(../icons/solid/chevron-down.svg);
+		mask-image: url(../icons/solid/chevron-down.svg);
+	}
+	&.mobile-alt {
+		-webkit-mask-image: url(../icons/solid/mobile-alt.svg);
+		mask-image: url(../icons/solid/mobile-alt.svg);
+	}
+	&.check {
+		-webkit-mask-image: url(../icons/solid/check.svg);
+		mask-image: url(../icons/solid/check.svg);
+	}
+	&.times {
+		-webkit-mask-image: url(../icons/solid/times.svg);
+		mask-image: url(../icons/solid/times.svg);
+	}
+	&.slash {
+		-webkit-mask-image: url(../icons/solid/slash.svg);
+		mask-image: url(../icons/solid/slash.svg);
+	}
+
+	&.hashtag {
+		-webkit-mask-image: url(../icons/solid/hashtag.svg);
+		mask-image: url(../icons/solid/hashtag.svg);
+	}
 }

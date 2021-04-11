@@ -1,0 +1,61 @@
+:root {
+  --dropdown-background: rgba(0, 0, 0, 0.1);
+  --dropdown-padding: 8px;
+}
+
+.dropdown {
+  background: var(--dropdown-background);
+  border-radius: 4px;
+  user-select: none;
+}
+.dropdown.open {
+  border: 1px solid var(--background-tertiary);
+}
+.dropdown.open .control {
+  border: none;
+  border-bottom: 1px solid var(--background-tertiary);
+}
+.dropdown .item {
+  display: flex;
+  min-height: 40px;
+  padding: var(--dropdown-padding);
+  cursor: pointer;
+}
+.dropdown .item:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.dropdown .item.selected {
+  background: var(--background-tertiary);
+}
+.dropdown .item .left {
+  flex-grow: 1;
+}
+.dropdown .item .icon {
+  --size: 16px;
+  color: var(--text-muted);
+}
+.dropdown .item .name {
+  color: var(--text-default);
+}
+.dropdown .item span, .dropdown .item {
+  display: flex;
+  align-items: center;
+}
+.dropdown .item span > *, .dropdown .item > * {
+  margin: 0 0.2rem;
+}
+.dropdown .control {
+  border: 1px solid var(--background-tertiary);
+}
+.dropdown .control:hover {
+  background: none;
+}
+.dropdown.open .menu {
+  display: block;
+}
+.dropdown .menu {
+  display: none;
+  box-shadow: rgba(32, 34, 37, 0.5) 0px 1px 5px 0px;
+}
+
+/*# sourceMappingURL=dropdown.css.map */

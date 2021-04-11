@@ -289,60 +289,55 @@ i.icon {
   -webkit-mask-position: center;
   mask-repeat: no-repeat;
   mask-position: center;
+  width: var(--size);
+  height: var(--size);
 }
 i.icon path {
   fill: currentColor;
 }
 i.icon.size-half {
-  width: 15px;
-  height: 15px;
+  --size: 15px;
 }
 i.icon.size-1, i.icon {
-  width: 25px;
-  height: 25px;
+  --size: 25px;
 }
 i.icon.size-2 {
-  width: 50px;
-  height: 50px;
+  --size: 50px;
 }
 i.icon.size-3 {
-  width: 75px;
-  height: 75px;
+  --size: 75px;
 }
-
-.settings {
+i.icon.settings {
   -webkit-mask-image: url(../icons/solid/cog.svg);
   mask-image: url(../icons/solid/cog.svg);
 }
-
-.voice-chat {
+i.icon.voice-chat {
   -webkit-mask-image: url(../icons/solid/volume-up.svg);
   mask-image: url(../icons/solid/volume-up.svg);
 }
-
-.chevron-down {
+i.icon.chevron-down {
   -webkit-mask-image: url(../icons/solid/chevron-down.svg);
   mask-image: url(../icons/solid/chevron-down.svg);
 }
-
-.mobile-alt {
+i.icon.mobile-alt {
   -webkit-mask-image: url(../icons/solid/mobile-alt.svg);
   mask-image: url(../icons/solid/mobile-alt.svg);
 }
-
-.check {
+i.icon.check {
   -webkit-mask-image: url(../icons/solid/check.svg);
   mask-image: url(../icons/solid/check.svg);
 }
-
-.times {
+i.icon.times {
   -webkit-mask-image: url(../icons/solid/times.svg);
   mask-image: url(../icons/solid/times.svg);
 }
-
-.slash {
+i.icon.slash {
   -webkit-mask-image: url(../icons/solid/slash.svg);
   mask-image: url(../icons/solid/slash.svg);
+}
+i.icon.hashtag {
+  -webkit-mask-image: url(../icons/solid/hashtag.svg);
+  mask-image: url(../icons/solid/hashtag.svg);
 }
 
 :root {
@@ -641,13 +636,15 @@ h3 {
 
 /* BACKGROUND #18191c */
 /* TEXT #b9bbbe */
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.menu {
+.popup {
   position: absolute;
   visibility: hidden;
   opacity: 0;
@@ -659,38 +656,38 @@ h3 {
   /* transition: 0.1s; */
 }
 
-.menu > .scroller > .separator {
+.popup > .scroller > .separator {
   margin: 4px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.menu > .scroller > div[role=group] > .item {
+.popup > .scroller > div[role=group] > .item {
   padding: 6px 8px;
   border-radius: 2px;
   user-select: none;
 }
 
-.menu > .scroller > div[role=group] > .item[data-type=normal]:hover {
+.popup > .scroller > div[role=group] > .item[data-type=normal]:hover {
   color: #fff;
   background: #5c6fb1;
   cursor: pointer;
 }
 
-.menu > .scroller > div[role=group] > .item[data-type=slider]:hover {
+.popup > .scroller > div[role=group] > .item[data-type=slider]:hover {
   color: #fff;
 }
 
-.menu > .scroller > div[role=group] > .item > .label {
+.popup > .scroller > div[role=group] > .item > .label {
   color: #b9bbbe;
 }
 
 /* Slider */
-.menu > .scroller > div[role=group] > .item > .slider {
+.popup > .scroller > div[role=group] > .item > .slider {
   position: relative;
   width: 100%;
 }
 
-.menu > .scroller > div[role=group] > .item > .slider > #slider {
+.popup > .scroller > div[role=group] > .item > .slider > #slider {
   -webkit-appearance: none;
   /* Override default CSS styles */
   appearance: none;
@@ -701,7 +698,7 @@ h3 {
   width: 100%;
 }
 
-.menu > .scroller > div[role=group] > .item > .slider > #slider::-webkit-slider-thumb {
+.popup > .scroller > div[role=group] > .item > .slider > #slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   /* Override default CSS styles */
   position: relative;
@@ -718,11 +715,11 @@ h3 {
   z-index: 6;
 }
 
-.menu > .scroller > div[role=group] > .item > .slider > #slider::-webkit-slider-thumb:hover {
+.popup > .scroller > div[role=group] > .item > .slider > #slider::-webkit-slider-thumb:hover {
   cursor: ew-resize;
 }
 
-.menu > .scroller > div[role=group] > .item > .slider > #progressBar {
+.popup > .scroller > div[role=group] > .item > .slider > #progressBar {
   position: absolute;
   background: #7289da;
   border-radius: 4px;
@@ -732,7 +729,7 @@ h3 {
   left: 0;
 }
 
-.menu > .scroller > div[role=group] > .item > .slider > #selector > #grabber {
+.popup > .scroller > div[role=group] > .item > .slider > #selector > #grabber {
   position: absolute;
   width: 9px;
   height: 22px;
@@ -849,8 +846,7 @@ h3 {
 .switch .slider .icon {
   position: absolute;
   transition: 0.4s;
-  height: 15px;
-  width: 15px;
+  --size: 15px;
   top: 9.5px;
   left: 9.5px;
 }
@@ -914,8 +910,7 @@ h3 {
   color: var(--switch-icon-selected);
 }
 .radio-switch label .icon {
-  width: 14px;
-  height: 14px;
+  --size: 14px;
 }
 .radio-switch label input {
   visibility: hidden;
@@ -938,7 +933,7 @@ h3 {
   cursor: pointer;
   font-size: 22px;
   user-select: none;
-  height: var(--checkbox-size);
+  min-height: var(--checkbox-size);
 }
 .checkbox input {
   position: absolute;
@@ -949,7 +944,7 @@ h3 {
 }
 .checkbox input:checked ~ .checkmark {
   background-color: var(--checkbox-active);
-  border-color: var(--primary);
+  border-color: var(--checkbox-active);
 }
 .checkbox input:checked ~ .checkmark .icon {
   display: block;
@@ -976,8 +971,67 @@ h3 {
 .checkbox .checkmark .icon {
   display: none;
   color: var(--text-default);
-  width: 15px;
-  height: 15px;
+  --size: 15px;
+}
+
+:root {
+  --dropdown-background: rgba(0, 0, 0, 0.1);
+  --dropdown-padding: 8px;
+}
+
+.dropdown {
+  background: var(--dropdown-background);
+  border-radius: 4px;
+  user-select: none;
+}
+.dropdown.open {
+  border: 1px solid var(--background-tertiary);
+}
+.dropdown.open .control {
+  border: none;
+  border-bottom: 1px solid var(--background-tertiary);
+}
+.dropdown .item {
+  display: flex;
+  min-height: 40px;
+  padding: var(--dropdown-padding);
+  cursor: pointer;
+}
+.dropdown .item:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.dropdown .item.selected {
+  background: var(--background-tertiary);
+}
+.dropdown .item .left {
+  flex-grow: 1;
+}
+.dropdown .item .icon {
+  --size: 16px;
+  color: var(--text-muted);
+}
+.dropdown .item .name {
+  color: var(--text-default);
+}
+.dropdown .item span, .dropdown .item {
+  display: flex;
+  align-items: center;
+}
+.dropdown .item span > *, .dropdown .item > * {
+  margin: 0 0.2rem;
+}
+.dropdown .control {
+  border: 1px solid var(--background-tertiary);
+}
+.dropdown .control:hover {
+  background: none;
+}
+.dropdown.open .menu {
+  display: block;
+}
+.dropdown .menu {
+  display: none;
+  box-shadow: rgba(32, 34, 37, 0.5) 0px 1px 5px 0px;
 }
 
 /*# sourceMappingURL=index.css.map */

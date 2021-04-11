@@ -1,12 +1,14 @@
 /* BACKGROUND #18191c */
 /* TEXT #b9bbbe */
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.menu {
+.popup {
   position: absolute;
   visibility: hidden;
   opacity: 0;
@@ -18,38 +20,38 @@
   /* transition: 0.1s; */
 }
 
-.menu > .scroller > .separator {
+.popup > .scroller > .separator {
   margin: 4px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.menu > .scroller > div[role=group] > .item {
+.popup > .scroller > div[role=group] > .item {
   padding: 6px 8px;
   border-radius: 2px;
   user-select: none;
 }
 
-.menu > .scroller > div[role=group] > .item[data-type=normal]:hover {
+.popup > .scroller > div[role=group] > .item[data-type=normal]:hover {
   color: #fff;
   background: #5c6fb1;
   cursor: pointer;
 }
 
-.menu > .scroller > div[role=group] > .item[data-type=slider]:hover {
+.popup > .scroller > div[role=group] > .item[data-type=slider]:hover {
   color: #fff;
 }
 
-.menu > .scroller > div[role=group] > .item > .label {
+.popup > .scroller > div[role=group] > .item > .label {
   color: #b9bbbe;
 }
 
 /* Slider */
-.menu > .scroller > div[role=group] > .item > .slider {
+.popup > .scroller > div[role=group] > .item > .slider {
   position: relative;
   width: 100%;
 }
 
-.menu > .scroller > div[role=group] > .item > .slider > #slider {
+.popup > .scroller > div[role=group] > .item > .slider > #slider {
   -webkit-appearance: none;
   /* Override default CSS styles */
   appearance: none;
@@ -60,7 +62,7 @@
   width: 100%;
 }
 
-.menu > .scroller > div[role=group] > .item > .slider > #slider::-webkit-slider-thumb {
+.popup > .scroller > div[role=group] > .item > .slider > #slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   /* Override default CSS styles */
   position: relative;
@@ -77,11 +79,11 @@
   z-index: 6;
 }
 
-.menu > .scroller > div[role=group] > .item > .slider > #slider::-webkit-slider-thumb:hover {
+.popup > .scroller > div[role=group] > .item > .slider > #slider::-webkit-slider-thumb:hover {
   cursor: ew-resize;
 }
 
-.menu > .scroller > div[role=group] > .item > .slider > #progressBar {
+.popup > .scroller > div[role=group] > .item > .slider > #progressBar {
   position: absolute;
   background: #7289da;
   border-radius: 4px;
@@ -91,7 +93,7 @@
   left: 0;
 }
 
-.menu > .scroller > div[role=group] > .item > .slider > #selector > #grabber {
+.popup > .scroller > div[role=group] > .item > .slider > #selector > #grabber {
   position: absolute;
   width: 9px;
   height: 22px;
