@@ -60,5 +60,9 @@ i.icon.hashtag {
   -webkit-mask-image: url(../icons/solid/hashtag.svg);
   mask-image: url(../icons/solid/hashtag.svg);
 }
+i.icon.plus {
+  -webkit-mask-image: url(../icons/solid/plus.svg);
+  mask-image: url(../icons/solid/plus.svg);
+}
 
 /*# sourceMappingURL=icons.css.map */

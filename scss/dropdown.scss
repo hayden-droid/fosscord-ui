@@ -18,8 +18,7 @@
 		}
 	}
 
-	> .item,
-	.menu > .item {
+	.item {
 		display: flex;
 		min-height: 38px;
 		padding: var(--dropdown-padding);
@@ -40,6 +39,7 @@
 		.icon {
 			--size: 16px;
 			color: var(--text-muted);
+			display: inline-block;
 		}
 
 		.name {

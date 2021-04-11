@@ -16,43 +16,34 @@
 .dropdown.open .control {
   border: none;
 }
-.dropdown > .item,
-.dropdown .menu > .item {
+.dropdown .item {
   display: flex;
   min-height: 38px;
   padding: var(--dropdown-padding);
   cursor: pointer;
 }
-.dropdown > .item:hover,
-.dropdown .menu > .item:hover {
+.dropdown .item:hover {
   background: rgba(0, 0, 0, 0.1);
 }
-.dropdown > .item.selected,
-.dropdown .menu > .item.selected {
+.dropdown .item.selected {
   background: var(--background-tertiary);
 }
-.dropdown > .item .left,
-.dropdown .menu > .item .left {
+.dropdown .item .left {
   flex-grow: 1;
 }
-.dropdown > .item .icon,
-.dropdown .menu > .item .icon {
+.dropdown .item .icon {
   --size: 16px;
   color: var(--text-muted);
+  display: inline-block;
 }
-.dropdown > .item .name,
-.dropdown .menu > .item .name {
+.dropdown .item .name {
   color: var(--text-default);
 }
-.dropdown > .item span, .dropdown > .item,
-.dropdown .menu > .item span,
-.dropdown .menu > .item {
+.dropdown .item span, .dropdown .item {
   display: flex;
   align-items: center;
 }
-.dropdown > .item span > *, .dropdown > .item > *,
-.dropdown .menu > .item span > *,
-.dropdown .menu > .item > * {
+.dropdown .item span > *, .dropdown .item > * {
   margin: 0 0.2rem;
 }
 .dropdown .control {
