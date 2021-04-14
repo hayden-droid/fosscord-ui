@@ -1049,4 +1049,11 @@ h3 {
   border-top-right-radius: none;
 }
 
+.modal {
+  display: none;
+}
+.modal.open {
+  display: block;
+}
+
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,8 @@
+.modal {
+  display: none;
+}
+.modal.open {
+  display: block;
+}
+
+/*# sourceMappingURL=modal.css.map */
