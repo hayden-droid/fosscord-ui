@@ -1,7 +1,55 @@
 .modal {
-	display: none;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: all ease 0.2s;
+	// transition-property: height, width, opacity;
+	-webkit-transform: translateZ(0);
+	background: var(--background-primary);
+	transform: scale(0.93);
 
 	&.open {
-		display: block;
+		visibility: visible;
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	.close-wrapper {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+		right: 1rem;
+		top: 1rem;
+
+		.text {
+			margin-top: 0.5rem;
+			color: var(--text-muted);
+		}
+		.close {
+			cursor: pointer;
+			border-radius: 50%;
+			padding: 0.5rem;
+			border: 2px solid var(--text-muted);
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+
+			.icon {
+				color: var(--text-strong);
+			}
+		}
+	}
+}
+
+.modal-background {
+	transition: transform ease 0.2s;
+
+	&.modal-open {
+		transform: scale(0.93);
 	}
 }

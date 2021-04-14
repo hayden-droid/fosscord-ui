@@ -345,6 +345,7 @@ i.icon.plus {
 }
 
 :root {
+  --text-strong: #fff;
   --text-default: #dcddde;
   --text-size: 16px;
   --text-secondary: #b9bbbe;
@@ -1050,10 +1051,53 @@ h3 {
 }
 
 .modal {
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all ease 0.2s;
+  -webkit-transform: translateZ(0);
+  background: var(--background-primary);
+  transform: scale(0.93);
 }
 .modal.open {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.modal .close-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+.modal .close-wrapper .text {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+}
+.modal .close-wrapper .close {
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.5rem;
+  border: 2px solid var(--text-muted);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .close-wrapper .close .icon {
+  color: var(--text-strong);
+}
+
+.modal-background {
+  transition: transform ease 0.2s;
+}
+.modal-background.modal-open {
+  transform: scale(0.93);
 }
 
 /*# sourceMappingURL=index.css.map */

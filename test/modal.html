@@ -15,6 +15,9 @@
 				align-items: center;
 				justify-content: center;
 				flex-direction: column;
+				width: 100%;
+				height: 100%;
+				margin: 0;
 			}
 
 			.main > * {
@@ -33,26 +36,36 @@
 	</head>
 
 	<body>
-		<div class="main">
+		<div class="main modal-background">
 			<h1>Modal</h1>
 			<a class="text link" href="./index.html">Home</a>
 			<button class="button primary" onclick="openModal()">Open Modal</button>
-		</div>
 
-		<div class="modal" id="modal">
-			<button class="button">Close</button>
+			<div class="modal" id="modal">
+				<span class="close-wrapper">
+					<span class="close" onclick="closeModal()">
+						<i class="icon times"></i>
+					</span>
+					<span class="text title">ESC</span>
+				</span>
+			</div>
 		</div>
-
 		<script>
 			function openModal() {
 				const modal = document.querySelector("#modal");
+				document.querySelector(".main").classList.add("modal-open");
 
 				modal.classList.add("open");
 			}
 
+			function closeModal() {
+				modal.classList.remove("open");
+				document.querySelector(".main").classList.remove("modal-open");
+			}
+
 			window.addEventListener("keydown", (event) => {
 				if (event.keyCode !== 27) return;
-				modal.classList.remove("open");
+				closeModal();
 
 				console.log(event);
 			});
