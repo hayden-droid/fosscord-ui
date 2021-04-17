@@ -24,7 +24,6 @@
 			display: block;
 			overflow: visible;
 			// margin-bottom: 2px;
-			transition: transform ease 0.2s;
 		}
 
 		.icon {
@@ -34,7 +33,6 @@
 			left: 1rem;
 			margin-top: -2rem; // "remove" icon from flow
 			margin-bottom: 1rem;
-			transition: transform ease 0.2s, background-color ease 0.2s;
 		}
 
 		.content {
@@ -89,12 +87,14 @@
 
 	.header {
 		max-width: 300px;
+		transition: transform ease 0.2s;
 	}
 
 	.icon {
 		border-radius: var(--card-icon-radius);
 		display: inline-block;
 		background: var(--background-secondary);
+		transition: transform ease 0.2s, background-color ease 0.2s;
 
 		img {
 			height: 40px;

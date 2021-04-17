@@ -19,7 +19,6 @@
   position: relative;
   display: block;
   overflow: visible;
-  transition: transform ease 0.2s;
 }
 .card-grid .card .icon {
   position: relative;
@@ -28,7 +27,6 @@
   left: 1rem;
   margin-top: -2rem;
   margin-bottom: 1rem;
-  transition: transform ease 0.2s, background-color ease 0.2s;
 }
 .card-grid .card .content {
   padding: 0 16px 16px;
@@ -73,11 +71,13 @@
 }
 .card .header {
   max-width: 300px;
+  transition: transform ease 0.2s;
 }
 .card .icon {
   border-radius: var(--card-icon-radius);
   display: inline-block;
   background: var(--background-secondary);
+  transition: transform ease 0.2s, background-color ease 0.2s;
 }
 .card .icon img {
   height: 40px;
