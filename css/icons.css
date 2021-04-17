@@ -64,5 +64,9 @@ i.icon.plus {
   -webkit-mask-image: url(../icons/solid/plus.svg);
   mask-image: url(../icons/solid/plus.svg);
 }
+i.icon.compass {
+  -webkit-mask-image: url(../icons/solid/compass.svg);
+  mask-image: url(../icons/solid/compass.svg);
+}
 
 /*# sourceMappingURL=icons.css.map */

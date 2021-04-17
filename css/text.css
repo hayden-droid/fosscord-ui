@@ -20,6 +20,9 @@ p {
   font-size: var(--text-size);
   color: var(--text-default);
 }
+.text.strong {
+  color: var(--text-strong);
+}
 .text.secondary {
   font-weight: 400;
   color: var(--text-secondary);

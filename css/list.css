@@ -1,14 +1,14 @@
 :root {
-  --LIST-separator-color: #ffffff0f;
-  --LIST-primary-color: var(--primary);
-  --LIST-primary-hover-color: var(--primary-hover);
-  --LIST-primary-active-color: var(--primary-active);
-  --LIST-success-color: var(--success);
-  --LIST-success-hover-color: var(--success-hover);
-  --LIST-danger-color: var(--danger);
-  --LIST-danger-hover-color: var(--danger-hover);
-  --LIST-background-accent: var(--background-tertiary);
-  --LIST-selected-color: #fff;
+  --list-separator-color: #ffffff0f;
+  --list-primary-color: var(--primary);
+  --list-primary-hover-color: var(--primary-hover);
+  --list-primary-active-color: var(--primary-active);
+  --list-success-color: var(--success);
+  --list-success-hover-color: var(--success-hover);
+  --list-danger-color: var(--danger);
+  --list-danger-hover-color: var(--danger-hover);
+  --list-background-accent: var(--background-tertiary);
+  --list-selected-color: #fff;
 }
 
 .list {
@@ -22,18 +22,18 @@
 .list .separator {
   margin: 8px 10px;
   height: 1px;
-  background-color: var(--LIST-separator-color);
+  background-color: var(--list-separator-color);
 }
 .list.accent {
-  background-color: var(--LIST-background-accent);
+  background-color: var(--list-background-accent);
   padding: 6px 8px;
 }
 .list.accent .item:hover, .list.accent .item.hover {
-  color: var(--LIST-selected-color);
-  background-color: var(--LIST-primary-color);
+  color: var(--list-selected-color);
+  background-color: var(--list-primary-color);
 }
 .list.accent .item:active, .list.accent .item.active {
-  background-color: var(--LIST-primary-active-color);
+  background-color: var(--list-primary-active-color);
 }
 .list.collapsed .title i {
   transform: rotate(-90deg);
@@ -53,15 +53,11 @@
   height: 10px;
   transition: transform 0.2s ease;
 }
-
 .list .item,
-.list-item,
 .list .title {
   padding: 6px 10px;
 }
-
-.list .item,
-.list-item {
+.list .item {
   margin-bottom: 2px;
   border-radius: 3px;
   cursor: pointer;
@@ -69,82 +65,68 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
-.list .item i,
-.list-item i {
-  height: 15px;
-  width: 15px;
+.list .item i {
+  --size: 15px;
 }
-.list .item i.left,
-.list-item i.left {
+.list .item i.left {
   margin-right: 6px;
 }
-.list .item i.right,
-.list-item i.right {
+.list .item i.right {
   margin-left: 6px;
-  height: 12px;
-  width: 12px;
+  --size: 12px;
 }
-.list .item .content,
-.list-item .content {
+.list .item .content {
   flex-grow: 1;
 }
-.list .item:hover,
-.list-item:hover {
+.list .item:hover {
   background-color: #4f545c29;
   color: var(--interactive-hover);
 }
-.list .item:hover .visibleOnHover,
-.list-item:hover .visibleOnHover {
+.list .item:hover .visibleOnHover {
   opacity: 1;
 }
-.list .item:active, .list .item.active,
-.list-item:active,
-.list-item.active {
+.list .item:active, .list .item.active {
   background-color: #4f545c52;
   color: var(--interactive-active);
 }
-.list .item.primary,
-.list-item.primary {
-  color: var(--LIST-primary-color);
+.list .item.primary {
+  color: var(--list-primary-color);
 }
-.list .item.primary:hover,
-.list-item.primary:hover {
-  background-color: var(--LIST-primary-hover-color);
+.list .item.primary:hover {
+  background-color: var(--list-primary-hover-color);
 }
-.list .item.primary:active, .list .item.primary.active,
-.list-item.primary:active,
-.list-item.primary.active {
-  color: var(--LIST-selected-color);
-  background-color: var(--LIST-primary-color);
+.list .item.primary:active, .list .item.primary.active {
+  background-color: var(--list-primary-color);
 }
-.list .item.danger,
-.list-item.danger {
-  color: var(--LIST-danger-color);
+.list .item.primary:active,
+.list .item.primary:active .icon, .list .item.primary.active,
+.list .item.primary.active .icon, .list .item.danger:active,
+.list .item.danger:active .icon, .list .item.danger.active,
+.list .item.danger.active .icon, .list .item.success:active,
+.list .item.success:active .icon, .list .item.success.active,
+.list .item.success.active .icon {
+  color: var(--list-selected-color);
 }
-.list .item.danger:hover,
-.list-item.danger:hover {
-  background-color: var(--LIST-danger-hover-color);
+.list .item.danger {
+  color: var(--list-danger-color);
 }
-.list .item.danger:active, .list .item.danger.active,
-.list-item.danger:active,
-.list-item.danger.active {
-  color: var(--LIST-selected-color);
-  background-color: var(--LIST-danger-color);
+.list .item.danger:hover {
+  background-color: var(--list-danger-hover-color);
 }
-.list .item.success,
-.list-item.success {
-  color: var(--LIST-success-color);
+.list .item.danger:active, .list .item.danger.active {
+  background-color: var(--list-danger-color);
 }
-.list .item.success:hover,
-.list-item.success:hover {
-  background-color: var(--LIST-success-hover-color);
+.list .item.success {
+  color: var(--list-success-color);
 }
-.list .item.success:active, .list .item.success.active,
-.list-item.success:active,
-.list-item.success.active {
-  color: var(--LIST-selected-color);
-  background-color: var(--LIST-success-color);
+.list .item.success:hover {
+  background-color: var(--list-success-hover-color);
+}
+.list .item.success:active, .list .item.success.active {
+  background-color: var(--list-success-color);
 }
 
 /*# sourceMappingURL=list.css.map */

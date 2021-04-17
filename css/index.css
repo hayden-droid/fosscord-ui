@@ -343,6 +343,10 @@ i.icon.plus {
   -webkit-mask-image: url(../icons/solid/plus.svg);
   mask-image: url(../icons/solid/plus.svg);
 }
+i.icon.compass {
+  -webkit-mask-image: url(../icons/solid/compass.svg);
+  mask-image: url(../icons/solid/compass.svg);
+}
 
 :root {
   --text-strong: #fff;
@@ -365,6 +369,9 @@ p {
 .text {
   font-size: var(--text-size);
   color: var(--text-default);
+}
+.text.strong {
+  color: var(--text-strong);
 }
 .text.secondary {
   font-weight: 400;
@@ -419,16 +426,16 @@ h3 {
 }
 
 :root {
-  --LIST-separator-color: #ffffff0f;
-  --LIST-primary-color: var(--primary);
-  --LIST-primary-hover-color: var(--primary-hover);
-  --LIST-primary-active-color: var(--primary-active);
-  --LIST-success-color: var(--success);
-  --LIST-success-hover-color: var(--success-hover);
-  --LIST-danger-color: var(--danger);
-  --LIST-danger-hover-color: var(--danger-hover);
-  --LIST-background-accent: var(--background-tertiary);
-  --LIST-selected-color: #fff;
+  --list-separator-color: #ffffff0f;
+  --list-primary-color: var(--primary);
+  --list-primary-hover-color: var(--primary-hover);
+  --list-primary-active-color: var(--primary-active);
+  --list-success-color: var(--success);
+  --list-success-hover-color: var(--success-hover);
+  --list-danger-color: var(--danger);
+  --list-danger-hover-color: var(--danger-hover);
+  --list-background-accent: var(--background-tertiary);
+  --list-selected-color: #fff;
 }
 
 .list {
@@ -442,18 +449,18 @@ h3 {
 .list .separator {
   margin: 8px 10px;
   height: 1px;
-  background-color: var(--LIST-separator-color);
+  background-color: var(--list-separator-color);
 }
 .list.accent {
-  background-color: var(--LIST-background-accent);
+  background-color: var(--list-background-accent);
   padding: 6px 8px;
 }
 .list.accent .item:hover, .list.accent .item.hover {
-  color: var(--LIST-selected-color);
-  background-color: var(--LIST-primary-color);
+  color: var(--list-selected-color);
+  background-color: var(--list-primary-color);
 }
 .list.accent .item:active, .list.accent .item.active {
-  background-color: var(--LIST-primary-active-color);
+  background-color: var(--list-primary-active-color);
 }
 .list.collapsed .title i {
   transform: rotate(-90deg);
@@ -473,15 +480,11 @@ h3 {
   height: 10px;
   transition: transform 0.2s ease;
 }
-
 .list .item,
-.list-item,
 .list .title {
   padding: 6px 10px;
 }
-
-.list .item,
-.list-item {
+.list .item {
   margin-bottom: 2px;
   border-radius: 3px;
   cursor: pointer;
@@ -489,82 +492,68 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
-.list .item i,
-.list-item i {
-  height: 15px;
-  width: 15px;
+.list .item i {
+  --size: 15px;
 }
-.list .item i.left,
-.list-item i.left {
+.list .item i.left {
   margin-right: 6px;
 }
-.list .item i.right,
-.list-item i.right {
+.list .item i.right {
   margin-left: 6px;
-  height: 12px;
-  width: 12px;
+  --size: 12px;
 }
-.list .item .content,
-.list-item .content {
+.list .item .content {
   flex-grow: 1;
 }
-.list .item:hover,
-.list-item:hover {
+.list .item:hover {
   background-color: #4f545c29;
   color: var(--interactive-hover);
 }
-.list .item:hover .visibleOnHover,
-.list-item:hover .visibleOnHover {
+.list .item:hover .visibleOnHover {
   opacity: 1;
 }
-.list .item:active, .list .item.active,
-.list-item:active,
-.list-item.active {
+.list .item:active, .list .item.active {
   background-color: #4f545c52;
   color: var(--interactive-active);
 }
-.list .item.primary,
-.list-item.primary {
-  color: var(--LIST-primary-color);
+.list .item.primary {
+  color: var(--list-primary-color);
 }
-.list .item.primary:hover,
-.list-item.primary:hover {
-  background-color: var(--LIST-primary-hover-color);
+.list .item.primary:hover {
+  background-color: var(--list-primary-hover-color);
 }
-.list .item.primary:active, .list .item.primary.active,
-.list-item.primary:active,
-.list-item.primary.active {
-  color: var(--LIST-selected-color);
-  background-color: var(--LIST-primary-color);
+.list .item.primary:active, .list .item.primary.active {
+  background-color: var(--list-primary-color);
 }
-.list .item.danger,
-.list-item.danger {
-  color: var(--LIST-danger-color);
+.list .item.primary:active,
+.list .item.primary:active .icon, .list .item.primary.active,
+.list .item.primary.active .icon, .list .item.danger:active,
+.list .item.danger:active .icon, .list .item.danger.active,
+.list .item.danger.active .icon, .list .item.success:active,
+.list .item.success:active .icon, .list .item.success.active,
+.list .item.success.active .icon {
+  color: var(--list-selected-color);
 }
-.list .item.danger:hover,
-.list-item.danger:hover {
-  background-color: var(--LIST-danger-hover-color);
+.list .item.danger {
+  color: var(--list-danger-color);
 }
-.list .item.danger:active, .list .item.danger.active,
-.list-item.danger:active,
-.list-item.danger.active {
-  color: var(--LIST-selected-color);
-  background-color: var(--LIST-danger-color);
+.list .item.danger:hover {
+  background-color: var(--list-danger-hover-color);
 }
-.list .item.success,
-.list-item.success {
-  color: var(--LIST-success-color);
+.list .item.danger:active, .list .item.danger.active {
+  background-color: var(--list-danger-color);
 }
-.list .item.success:hover,
-.list-item.success:hover {
-  background-color: var(--LIST-success-hover-color);
+.list .item.success {
+  color: var(--list-success-color);
 }
-.list .item.success:active, .list .item.success.active,
-.list-item.success:active,
-.list-item.success.active {
-  color: var(--LIST-selected-color);
-  background-color: var(--LIST-success-color);
+.list .item.success:hover {
+  background-color: var(--list-success-hover-color);
+}
+.list .item.success:active, .list .item.success.active {
+  background-color: var(--list-success-color);
 }
 
 :root {
@@ -1050,6 +1039,11 @@ h3 {
   border-top-right-radius: none;
 }
 
+:root {
+  --modal-scale: 0.07;
+  --modal-padding: 60px;
+}
+
 .modal {
   visibility: hidden;
   position: absolute;
@@ -1062,19 +1056,41 @@ h3 {
   -webkit-transform: translateZ(0);
   background: var(--background-primary);
   transform: scale(0.93);
+  display: flex;
+  z-index: 1;
 }
 .modal.open {
   visibility: visible;
   opacity: 1;
-  transform: scale(1);
+  transform: scale(calc(1.01 + var(--modal-scale)));
+  margin: 0;
+}
+.modal .sidebar {
+  width: 30%;
+  padding: var(--modal-padding) 20px;
+  background: var(--background-secondary);
+  flex-shrink: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.modal > .content {
+  width: calc(70% - var(--modal-padding) * 3 - 20px);
+  padding: var(--modal-padding) 40px 80px;
+}
+.modal > .content .headline {
+  text-align: left !important;
+  color: var(--text-strong);
+}
+.modal > .content .headline:first-child {
+  margin-top: 0;
 }
 .modal .close-wrapper {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: var(--modal-padding);
+  top: var(--modal-padding);
 }
 .modal .close-wrapper .text {
   margin-top: 0.5rem;
@@ -1097,7 +1113,7 @@ h3 {
   transition: transform ease 0.2s;
 }
 .modal-background.modal-open {
-  transform: scale(0.93);
+  transform: scale(calc(1 - var(--modal-scale)));
 }
 
 /*# sourceMappingURL=index.css.map */
