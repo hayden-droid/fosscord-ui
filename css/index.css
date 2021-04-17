@@ -350,6 +350,10 @@ i.icon.compass {
   -webkit-mask-image: url(../icons/solid/compass.svg);
   mask-image: url(../icons/solid/compass.svg);
 }
+i.icon.certificate {
+  -webkit-mask-image: url(../icons/solid/certificate.svg);
+  mask-image: url(../icons/solid/certificate.svg);
+}
 
 :root {
   --text-strong: #fff;
@@ -1129,19 +1133,18 @@ h3 {
   grid-gap: 16px;
   grid-template-columns: repeat(auto-fill, minmax(248px, 1fr));
 }
-.card-grid .card:hover .icon {
+.card-grid .card:hover .logo {
   transform: scale(1.05);
 }
 .card-grid .card .header {
-  min-height: 143px;
+  height: 143px;
   max-width: none;
-  height: auto;
   width: 100%;
   position: relative;
   display: block;
   overflow: visible;
 }
-.card-grid .card .icon {
+.card-grid .card .logo {
   position: relative;
   padding: 0.1rem;
   top: 0rem;
@@ -1167,7 +1170,7 @@ h3 {
   padding: 1rem;
   padding-left: 1.5rem;
 }
-.card-list .card .icon {
+.card-list .card .logo {
   margin-bottom: 0.5rem;
 }
 
@@ -1187,20 +1190,23 @@ h3 {
   transform: scale(1.05);
   width: 100%;
 }
-.card:hover .icon {
+.card:hover .logo {
   background: var(--background-tertiary);
 }
 .card .header {
   max-width: 300px;
   transition: transform ease 0.2s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.card .icon {
+.card .logo {
   border-radius: var(--card-icon-radius);
   display: inline-block;
   background: var(--background-secondary);
   transition: transform ease 0.2s, background-color ease 0.2s;
 }
-.card .icon img {
+.card .logo img {
   height: 40px;
   width: 40px;
   margin-bottom: -4px;
@@ -1211,10 +1217,17 @@ h3 {
   font-weight: 700;
   font-size: 1rem;
   margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+.card .title .badge {
+  --size: 15px;
+  margin-right: 0.4rem;
 }
 .card .description {
   text-align: justify;
   font-size: 0.9rem;
+  color: var(--text-default);
 }
 .card .stats {
   margin-top: 1rem;
