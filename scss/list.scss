@@ -117,8 +117,9 @@
 			color: var(--interactive-active);
 		}
 
-		&.primary {
-			color: var(--list-primary-color);
+		&.primary,
+		& {
+			// color: var(--list-primary-color);
 
 			&:hover {
 				background-color: var(--list-primary-hover-color);

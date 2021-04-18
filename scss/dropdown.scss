@@ -83,5 +83,8 @@
 		overflow: hidden;
 		border-top-left-radius: none;
 		border-top-right-radius: none;
+		z-index: 1;
+		max-height: 350px;
+		overflow: auto;
 	}
 }

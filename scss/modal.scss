@@ -36,12 +36,14 @@
 	}
 
 	& > .content {
-		width: calc(70% - var(--modal-padding) * 3 - 20px);
+		width: 100%;
+		max-width: 740px;
 		padding: var(--modal-padding) 40px 80px;
+		padding-right: calc(var(--modal-padding) * 2);
+		overflow: auto;
 
 		.headline {
 			text-align: left !important;
-			color: var(--text-strong);
 
 			&:first-child {
 				margin-top: 0;
@@ -61,6 +63,7 @@
 			margin-top: 0.5rem;
 			color: var(--text-muted);
 		}
+
 		.close {
 			cursor: pointer;
 			border-radius: 50%;
