@@ -21,6 +21,7 @@
   --interactive: #b9bbbe;
   --interactive-active: var(--text-default);
   --interactive-hover: #dcddde;
+  --background-modal: #484c52;
   --element-margin: 8px;
   --elevation-low: 0 1px 0 rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05), 0 2px 0 rgba(4, 4, 5, 0.05);
   --elevation-medium: 0 4px 4px rgba(0, 0, 0, 0.16);
@@ -393,6 +394,7 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--text-title);
+  user-select: none;
 }
 .text.danger {
   color: var(--text-danger);
@@ -414,6 +416,7 @@ p {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: --element-margin;
+  color: var(--text-strong);
 }
 
 .text.link,
@@ -526,13 +529,10 @@ h3 {
   background-color: #4f545c52;
   color: var(--interactive-active);
 }
-.list .item.primary {
-  color: var(--list-primary-color);
-}
-.list .item.primary:hover {
+.list .item.primary:hover, .list .item:hover {
   background-color: var(--list-primary-hover-color);
 }
-.list .item.primary:active, .list .item.primary.active {
+.list .item.primary:active, .list .item.primary.active, .list .item:active, .list .item.active {
   background-color: var(--list-primary-color);
 }
 .list .item.primary:active,
@@ -1044,6 +1044,9 @@ h3 {
   overflow: hidden;
   border-top-left-radius: none;
   border-top-right-radius: none;
+  z-index: 1;
+  max-height: 350px;
+  overflow: auto;
 }
 
 :root {
@@ -1081,12 +1084,14 @@ h3 {
   justify-content: flex-end;
 }
 .modal > .content {
-  width: calc(70% - var(--modal-padding) * 3 - 20px);
+  width: 100%;
+  max-width: 740px;
   padding: var(--modal-padding) 40px 80px;
+  padding-right: calc(var(--modal-padding) * 2);
+  overflow: auto;
 }
 .modal > .content .headline {
   text-align: left !important;
-  color: var(--text-strong);
 }
 .modal > .content .headline:first-child {
   margin-top: 0;
@@ -1114,6 +1119,9 @@ h3 {
 }
 .modal .close-wrapper .close .icon {
   color: var(--text-strong);
+}
+.modal .close-wrapper .close:hover {
+  background-color: var(--background-modal);
 }
 
 .modal-background {
@@ -1181,6 +1189,10 @@ h3 {
   background: var(--background-secondary);
   border-radius: 8px;
   transition: background-color ease 0.2s, box-shadow ease 0.2s;
+  border: 4px solid transparent;
+}
+.card.active {
+  border-color: var(--primary);
 }
 .card:hover {
   background: var(--background-tertiary);
