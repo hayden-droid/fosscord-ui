@@ -72,5 +72,9 @@ i.icon.certificate {
   -webkit-mask-image: url(../icons/solid/certificate.svg);
   mask-image: url(../icons/solid/certificate.svg);
 }
+i.icon.trash-alt {
+  -webkit-mask-image: url(../icons/solid/trash-alt.svg);
+  mask-image: url(../icons/solid/trash-alt.svg);
+}
 
 /*# sourceMappingURL=icons.css.map */
