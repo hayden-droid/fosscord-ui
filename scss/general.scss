@@ -16,6 +16,7 @@ $warning: #faa61a;
 	--danger: #{$danger};
 	--danger-hover: #{rgba($danger, 0.1)};
 	--warning: #{$warning};
+	--warning-hover: #{rgba($warning, 0.1)}; 
 	--background-primary: #36393f;
 	--background-secondary: #2f3136;
 	--background-tertiary: #202225;
