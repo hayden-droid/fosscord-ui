@@ -92,13 +92,10 @@
   background-color: #4f545c52;
   color: var(--interactive-active);
 }
-.list .item.primary {
-  color: var(--list-primary-color);
-}
-.list .item.primary:hover {
+.list .item.primary:hover, .list .item:hover {
   background-color: var(--list-primary-hover-color);
 }
-.list .item.primary:active, .list .item.primary.active {
+.list .item.primary:active, .list .item.primary.active, .list .item:active, .list .item.active {
   background-color: var(--list-primary-color);
 }
 .list .item.primary:active,

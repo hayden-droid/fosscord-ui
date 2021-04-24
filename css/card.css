@@ -56,6 +56,10 @@
   background: var(--background-secondary);
   border-radius: 8px;
   transition: background-color ease 0.2s, box-shadow ease 0.2s;
+  border: 4px solid transparent;
+}
+.card.active {
+  border-color: var(--primary);
 }
 .card:hover {
   background: var(--background-tertiary);

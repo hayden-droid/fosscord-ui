@@ -1,8 +1,7 @@
 {
-	"name": "fosscord-css",
-	"version": "1.0.0",
+	"name": "@fosscord/ui",
+	"version": "1.0.1",
 	"description": "",
-	"main": "css/index.css",
 	"scripts": {
 		"scss": "sass scss/:css --watch"
 	},
