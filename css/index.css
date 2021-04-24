@@ -1307,6 +1307,7 @@ h3 {
   font-weight: 500;
   border-radius: 4px;
   margin-right: 3px;
+  user-select: none;
   text-transform: uppercase;
   height: 28px;
 }
