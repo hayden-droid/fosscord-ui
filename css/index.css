@@ -363,6 +363,10 @@ i.icon.trash-alt {
   -webkit-mask-image: url(../icons/solid/trash-alt.svg);
   mask-image: url(../icons/solid/trash-alt.svg);
 }
+i.icon.exclamation-circle {
+  -webkit-mask-image: url(../icons/solid/exclamation-circle.svg);
+  mask-image: url(../icons/solid/exclamation-circle.svg);
+}
 
 :root {
   --text-strong: #fff;
