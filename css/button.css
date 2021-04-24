@@ -13,6 +13,13 @@
   --button-secondary-hover-background: #68727f;
   --button-secondary-active-background: #5d6671;
   --button-secondary-outline-active-background: var(--secondary-hover);
+  --button-warning-background: var(--warning);
+  --button-warning-border: var(--warning);
+  --button-warning-color: var(--text-strong);
+  --button-warning-hover-background: #c47d02;
+  --button-warning-active-background: #faa61a;
+  --button-warning-outline-active-background: var(--warning-hover)
+  // danger btn
   --button-danger-background: var(--danger);
   --button-danger-border: var(--danger);
   --button-danger-color: var(--text-default);
@@ -131,6 +138,25 @@
 }
 .button.success.outline:active {
   background-color: var(--button-success-outline-active-background) !important;
+}
+.button.warning {
+  background: var(--button-warning-background);
+  border-color: var(--button-warning-border);
+  color: var(--button-warning-color);
+}
+.button.warning:hover {
+  background-color: var(--button-warning-hover-background);
+  border-color: var(--button-warning-hover-background);
+}
+.button.warning:active {
+  background-color: var(--button-warning-active-background);
+  border-color: var(--button-warning-active-background);
+}
+.button.warning.outline {
+  color: var(--button-warning-background);
+}
+.button.warning.outline:active {
+  background-color: var(--button-warning-outline-active-background) !important;
 }
 .button.link {
   background: var(--button-link-background);
