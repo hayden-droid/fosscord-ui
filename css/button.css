@@ -43,6 +43,9 @@
   transition: border-color 0.17s ease, background-color 0.17s ease, color 0.17s ease;
   font-weight: var(--button-font-weight);
   font-size: var(--button-font-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .button:focus {
   outline: none;
