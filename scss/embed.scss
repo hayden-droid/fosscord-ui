@@ -13,12 +13,12 @@
 	padding: 1rem;
 	padding-left: 0.75rem;
 	border-radius: 0.2rem;	
-	& .embed-toplvl-container{
+	& .embed-primary-container{
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
 	}
-	& .embed-second-container{
+	& .embed-secondary-container{
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -49,6 +49,10 @@
 	& .embed-thumpnail {
 		width: 5rem;
 		height: 5rem;
+		border-radius: 0.2rem;
+	}
+	& .embed-image{
+		border-radius: 0.2rem;
 	}
 	& .embed-title, .embed-description {
 		margin-top: 0.5rem;

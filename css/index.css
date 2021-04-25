@@ -1436,12 +1436,12 @@ h3 {
   padding-left: 0.75rem;
   border-radius: 0.2rem;
 }
-.embed .embed-toplvl-container {
+.embed .embed-primary-container {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-.embed .embed-second-container {
+.embed .embed-secondary-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1472,6 +1472,10 @@ h3 {
 .embed .embed-thumpnail {
   width: 5rem;
   height: 5rem;
+  border-radius: 0.2rem;
+}
+.embed .embed-image {
+  border-radius: 0.2rem;
 }
 .embed .embed-title, .embed .embed-description {
   margin-top: 0.5rem;
