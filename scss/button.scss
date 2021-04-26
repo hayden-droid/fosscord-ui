@@ -15,6 +15,13 @@
 	--button-secondary-hover-background: #68727f;
 	--button-secondary-active-background: #5d6671;
 	--button-secondary-outline-active-background: var(--secondary-hover);
+	// warning btn
+	--button-warning-background: var(--warning);
+	--button-warning-border: var(--warning);
+	--button-warning-color: var(--text-strong);
+	--button-warning-hover-background: #c47d02;
+	--button-warning-active-background: #faa61a;
+	--button-warning-outline-active-background: var(--warning-hover)
 	// danger btn
 	--button-danger-background: var(--danger);
 	--button-danger-border: var(--danger);
@@ -48,6 +55,9 @@
 	transition: border-color 0.17s ease, background-color 0.17s ease, color 0.17s ease;
 	font-weight: var(--button-font-weight);
 	font-size: var(--button-font-size);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	&:focus {
 		outline: none;
@@ -157,6 +167,30 @@
 
 			&:active {
 				background-color: var(--button-success-outline-active-background) !important;
+			}
+		}
+	}
+
+	&.warning {
+		background: var(--button-warning-background);
+		border-color: var(--button-warning-border);
+		color: var(--button-warning-color);
+
+		&:hover {
+			background-color: var(--button-warning-hover-background);
+			border-color: var(--button-warning-hover-background);
+		}
+
+		&:active {
+			background-color: var(--button-warning-active-background);
+			border-color: var(--button-warning-active-background);
+		}
+
+		&.outline {
+			color: var(--button-warning-background);
+
+			&:active {
+				background-color: var(--button-warning-outline-active-background) !important;
 			}
 		}
 	}
