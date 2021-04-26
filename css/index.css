@@ -1488,5 +1488,22 @@ h3 {
   content: "•";
   margin-right: 0.5rem;
 }
+.embed .embed-fields-container {
+  display: flex;
+  flex-direction: column;
+}
+.embed .embed-fields-container.inline {
+  margin-top: 1rem;
+  flex-direction: row;
+}
+.embed .embed-field {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  margin-left: 0;
+}
+.embed .embed-field .embed-field-title {
+  color: var(--embed-text-secondary);
+}
 
 /*# sourceMappingURL=index.css.map */
