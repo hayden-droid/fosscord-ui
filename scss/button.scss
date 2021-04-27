@@ -21,7 +21,7 @@
 	--button-warning-color: var(--text-strong);
 	--button-warning-hover-background: #c47d02;
 	--button-warning-active-background: #faa61a;
-	--button-warning-outline-active-background: var(--warning-hover)
+	--button-warning-outline-active-background: var(--warning-hover);
 	// danger btn
 	--button-danger-background: var(--danger);
 	--button-danger-border: var(--danger);
@@ -59,7 +59,7 @@
 	justify-content: center;
 	align-items: center;
 
-	&:disabled{
+	&:disabled {
 		cursor: not-allowed;
 		opacity: 0.5;
 	}

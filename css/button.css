@@ -18,8 +18,7 @@
   --button-warning-color: var(--text-strong);
   --button-warning-hover-background: #c47d02;
   --button-warning-active-background: #faa61a;
-  --button-warning-outline-active-background: var(--warning-hover)
-  // danger btn
+  --button-warning-outline-active-background: var(--warning-hover);
   --button-danger-background: var(--danger);
   --button-danger-border: var(--danger);
   --button-danger-color: var(--text-default);
