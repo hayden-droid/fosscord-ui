@@ -1,6 +1,6 @@
 {
 	"name": "@fosscord/ui",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "",
 	"scripts": {
 		"scss": "sass scss/:css --watch"
