@@ -1111,7 +1111,7 @@ h3 {
 .modal.open {
   visibility: visible;
   opacity: 1;
-  transform: scale(calc(1.01 + var(--modal-scale)));
+  transform: scale(calc(1 + var(--modal-scale)));
   margin: 0;
 }
 .modal .sidebar {
