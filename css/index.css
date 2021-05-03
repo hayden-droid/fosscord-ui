@@ -76,7 +76,7 @@
   margin-bottom: 0.5rem;
   cursor: pointer;
 }
-.guild.unread > .pill {
+.guild.unread .pill {
   background-color: var(--guild-pill);
   height: 0.6rem;
   width: 0.25rem;
@@ -84,21 +84,29 @@
 .guild.active {
   border-radius: 25%;
 }
-.guild > img {
+.guild .img {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  transition: border-radius 0.1s;
+  transition: border-radius 0.1s ease, background-color 0.15s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-primary);
 }
-.guild.active > img {
+.guild .img:hover {
+  background: var(--primary);
+  color: var(--text-strong);
+}
+.guild.active img {
   border-radius: 35%;
 }
-.guild.active > .pill {
+.guild.active .pill {
   height: 2.5rem !important;
   width: 0.25rem;
   background-color: var(--guild-pill);
 }
-.guild.home > a {
+.guild.home a {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -110,7 +118,7 @@
   align-items: center;
   justify-content: center;
 }
-.guild.seperator > hr {
+.guild.seperator hr {
   margin: 0;
   padding: 0;
   margin-bottom: 0.5rem;
@@ -118,15 +126,15 @@
   border: none;
   border-bottom: 2px solid var(--guild-container-secondary);
 }
-.guild:hover > .pill {
+.guild:hover .pill {
   height: 1.25rem;
   width: 0.25rem;
   background-color: var(--guild-pill);
 }
-.guild:hover > img {
+.guild:hover .img {
   border-radius: 35%;
 }
-.guild > .pill {
+.guild .pill {
   height: 0rem;
   width: 0.25rem;
   background-color: transparent;
