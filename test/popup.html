@@ -75,23 +75,28 @@
 			</div>
 		</div>
 		<br />
-		<!-- This is new Easter Egg  -->
 		<script type="text/javascript">
-			window.addEventListener("contextmenu", function (ev) {
-				ev.preventDefault();
+			var pressTimer;
 
+			window.addEventListener("contextmenu", (ev) => Popup(ev));
+			window.addEventListener(
+				"touchstart",
+				(ev) => (pressTimer = window.setTimeout(() => Popup(ev), 3000))
+			);
+			window.addEventListener("touchend", clearTimeout(pressTimer));
+
+			function Popup(ev) {
+				ev.preventDefault();
 				var menu = document.getElementById("popup");
 				menu.style.opacity = "1";
 				menu.style.visibility = "visible";
 				menu.style.top = ev.clientY + "px";
 				menu.style.left = ev.clientX + "px";
-
 				document.addEventListener("click", function () {
 					menu.style.opacity = "0";
 					menu.style.visibility = "hidden";
 				});
-			});
-			// if you reading this, you pressed F12
+			}
 		</script>
 	</body>
 </html>
