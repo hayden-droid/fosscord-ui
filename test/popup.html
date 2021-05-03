@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../css/index.css" />
-		<title>Discord CSS Framwork - Popup</title>
+		<title>Discord CSS Framework - Popup</title>
 		<style>
 			body {
 				background-color: #2f3136;
@@ -35,7 +35,7 @@
 
 		<span>Click me!</span>
 
-		<div class="popup" role="menu">
+		<div id="popup" class="popup" role="menu">
 			<div class="scroller">
 				<div role="group">
 					<div class="item" data-type="normal" role="menuitem">
@@ -46,19 +46,6 @@
 					</div>
 					<div class="item" data-type="normal" role="menuitem">
 						<div class="label">Item 3</div>
-					</div>
-				</div>
-				<div class="separator" role="separator"></div>
-				<div role="group">
-					<div class="item" data-type="slider" role="menuitem">
-						<div class="label">Item voice</div>
-						<div class="slider">
-							<input type="range" min="0" max="100" value="50" id="slider" />
-							<div id="selector">
-								<div id="grabber" data-value="50%" style="left: 49%"></div>
-							</div>
-							<div id="progressBar"></div>
-						</div>
 					</div>
 				</div>
 				<div class="separator" role="separator"></div>
@@ -90,45 +77,19 @@
 		<br />
 		<!-- This is new Easter Egg  -->
 		<script type="text/javascript">
-			document.addEventListener("keydown", function (keyCode) {
-				if (keyCode.code == "F12") {
-					var keyP = document.getElementById("keyP");
-					keyP.innerHTML = "why you opened dev tools?";
-					setTimeout(function () {
-						keyP.innerHTML = "Popup";
-					}, 3000);
-				}
-			});
+			window.addEventListener("contextmenu", function (ev) {
+				ev.preventDefault();
 
-			var slider = document.getElementById("slider");
-			var progressBar = document.getElementById("progressBar");
-			var grabber = document.getElementById("grabber");
+				var menu = document.getElementById("popup");
+				menu.style.opacity = "1";
+				menu.style.visibility = "visible";
+				menu.style.top = ev.clientY + "px";
+				menu.style.left = ev.clientX + "px";
 
-			slider.oninput = function () {
-				progressBar.style.width = this.value + "%";
-				grabber.style.left = this.value - 1 + "%";
-				grabber.setAttribute("data-value", this.value + "%");
-			};
-
-			document.addEventListener("contextmenu", function (ev) {
-				if (
-					document.elementFromPoint(ev.clientX, ev.clientY).tagName == "HTML" ||
-					document.elementFromPoint(ev.clientX, ev.clientY).tagName == "BODY"
-				) {
-				} else if (document.elementFromPoint(ev.clientX, ev.clientY).tagName == "SPAN") {
-					ev.preventDefault();
-					var menu = document.querySelector(".menu");
-					menu.style.opacity = "1";
-					menu.style.visibility = "visible";
-					menu.style.top = ev.clientY + "px";
-					menu.style.left = ev.clientX + "px";
-
-					document.addEventListener("click", function () {
-						var menu = document.querySelector(".menu");
-						menu.style.opacity = "0";
-						menu.style.visibility = "hidden";
-					});
-				}
+				document.addEventListener("click", function () {
+					menu.style.opacity = "0";
+					menu.style.visibility = "hidden";
+				});
 			});
 			// if you reading this, you pressed F12
 		</script>
