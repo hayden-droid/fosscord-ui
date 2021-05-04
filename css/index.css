@@ -67,6 +67,7 @@
   flex-direction: column;
   background-color: var(--guild-container-background);
   padding-top: 0.5rem;
+  max-width: 66px;
 }
 
 .guild {
@@ -93,6 +94,10 @@
   justify-content: center;
   align-items: center;
   background: var(--background-primary);
+  text-align: center;
+  overflow: hidden;
+  user-select: none;
+  color: var(--text-default);
 }
 .guild .img:hover {
   background: var(--primary);
@@ -112,13 +117,13 @@
   border-radius: 50%;
   background-color: var(--guild-container-secondary);
 }
-.guild.seperator {
+.guild.separator {
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.guild.seperator hr {
+.guild.separator hr {
   margin: 0;
   padding: 0;
   margin-bottom: 0.5rem;
