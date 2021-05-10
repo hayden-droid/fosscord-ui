@@ -1,8 +1,16 @@
-$primary: #7289da;
+// Fosscord color scheme:
+$primary: #4768ff;
+$success: #38e654;
+$danger: #ff3a3b;
 $secondary: #747f8d;
-$success: #43b581;
-$danger: #f04747;
 $warning: #faa61a;
+
+// Discord color scheme:
+// $primary: #7289da;
+// $secondary: #747f8d;
+// $success: #43b581;
+// $danger: #f04747;
+// $warning: #faa61a;
 
 :root {
 	--primary: #{$primary};
@@ -16,7 +24,7 @@ $warning: #faa61a;
 	--danger: #{$danger};
 	--danger-hover: #{rgba($danger, 0.1)};
 	--warning: #{$warning};
-	--warning-hover: #{rgba($warning, 0.1)}; 
+	--warning-hover: #{rgba($warning, 0.1)};
 	--background-primary: #36393f;
 	--background-secondary: #2f3136;
 	--background-tertiary: #202225;

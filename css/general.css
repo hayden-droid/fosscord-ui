@@ -1,14 +1,14 @@
 :root {
-  --primary: #7289da;
+  --primary: #4768ff;
   --primary-shade: #5c6fb1;
-  --primary-hover: rgba(114, 137, 218, 0.1);
+  --primary-hover: rgba(71, 104, 255, 0.1);
   --primary-active: #4e5d94;
   --secondary: #747f8d;
   --secondary-hover: rgba(116, 127, 141, 0.1);
-  --success: #43b581;
-  --success-hover: rgba(67, 181, 129, 0.1);
-  --danger: #f04747;
-  --danger-hover: rgba(240, 71, 71, 0.1);
+  --success: #38e654;
+  --success-hover: rgba(56, 230, 84, 0.1);
+  --danger: #ff3a3b;
+  --danger-hover: rgba(255, 58, 59, 0.1);
   --warning: #faa61a;
   --warning-hover: rgba(250, 166, 26, 0.1);
   --background-primary: #36393f;

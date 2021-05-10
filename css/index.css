@@ -1,15 +1,15 @@
 @charset "UTF-8";
 :root {
-  --primary: #7289da;
+  --primary: #4768ff;
   --primary-shade: #5c6fb1;
-  --primary-hover: rgba(114, 137, 218, 0.1);
+  --primary-hover: rgba(71, 104, 255, 0.1);
   --primary-active: #4e5d94;
   --secondary: #747f8d;
   --secondary-hover: rgba(116, 127, 141, 0.1);
-  --success: #43b581;
-  --success-hover: rgba(67, 181, 129, 0.1);
-  --danger: #f04747;
-  --danger-hover: rgba(240, 71, 71, 0.1);
+  --success: #38e654;
+  --success-hover: rgba(56, 230, 84, 0.1);
+  --danger: #ff3a3b;
+  --danger-hover: rgba(255, 58, 59, 0.1);
   --warning: #faa61a;
   --warning-hover: rgba(250, 166, 26, 0.1);
   --background-primary: #36393f;
@@ -212,120 +212,120 @@
   outline: none;
 }
 .button.outline {
-  background-color: transparent;
+  background: transparent;
 }
 .button.outline:hover {
-  background-color: transparent;
+  background: transparent;
 }
 .button.primary {
-  background-color: var(--button-primary-background);
-  border-color: var(--button-primary-border);
+  background: var(--button-primary-background);
+  border: var(--button-primary-border);
   color: var(--button-primary-color);
 }
 .button.primary:hover {
-  background-color: var(--button-primary-hover-background);
-  border-color: var(--button-primary-hover-background);
+  background: var(--button-primary-hover-background);
+  border: var(--button-primary-hover-background);
 }
 .button.primary:active {
-  background-color: var(--button-primary-active-background);
-  border-color: var(--button-primary-active-background);
+  background: var(--button-primary-active-background);
+  border: var(--button-primary-active-background);
 }
 .button.primary.outline {
   color: var(--button-primary-background);
 }
 .button.primary.outline:active {
-  background-color: var(--button-primary-outline-active-background) !important;
+  background: var(--button-primary-outline-active-background) !important;
 }
 .button.secondary {
   background: var(--button-secondary-background);
-  border-color: var(--button-secondary-border);
+  border: var(--button-secondary-border);
   color: var(--button-secondary-color);
 }
 .button.secondary:hover {
-  background-color: var(--button-secondary-hover-background);
-  border-color: var(--button-secondary-hover-background);
+  background: var(--button-secondary-hover-background);
+  border: var(--button-secondary-hover-background);
 }
 .button.secondary:active {
-  background-color: var(--button-secondary-active-background);
-  border-color: var(--button-secondary-active-background);
+  background: var(--button-secondary-active-background);
+  border: var(--button-secondary-active-background);
 }
 .button.secondary.outline {
   color: var(--button-secondary-background);
 }
 .button.secondary.outline:active {
-  background-color: var(--button-secondary-outline-active-background) !important;
+  background: var(--button-secondary-outline-active-background) !important;
 }
 .button.danger {
   background: var(--button-danger-background);
-  border-color: var(--button-danger-border);
+  border: var(--button-danger-border);
   color: var(--button-danger-color);
 }
 .button.danger:hover {
-  background-color: var(--button-danger-hover-background);
-  border-color: var(--button-danger-hover-background);
+  background: var(--button-danger-hover-background);
+  border: var(--button-danger-hover-background);
 }
 .button.danger:active {
-  background-color: var(--button-danger-active-background);
-  border-color: var(--button-danger-active-background);
+  background: var(--button-danger-active-background);
+  border: var(--button-danger-active-background);
 }
 .button.danger.outline {
   color: var(--button-danger-background);
 }
 .button.danger.outline:active {
-  background-color: var(--button-danger-outline-active-background) !important;
+  background: var(--button-danger-outline-active-background) !important;
 }
 .button.success {
   background: var(--button-success-background);
-  border-color: var(--button-success-border);
+  border: var(--button-success-border);
   color: var(--button-success-color);
 }
 .button.success:hover {
-  background-color: var(--button-success-hover-background);
-  border-color: var(--button-success-hover-background);
+  background: var(--button-success-hover-background);
+  border: var(--button-success-hover-background);
 }
 .button.success:active {
-  background-color: var(--button-success-active-background);
-  border-color: var(--button-success-active-background);
+  background: var(--button-success-active-background);
+  border: var(--button-success-active-background);
 }
 .button.success.outline {
   color: var(--button-success-background);
 }
 .button.success.outline:active {
-  background-color: var(--button-success-outline-active-background) !important;
+  background: var(--button-success-outline-active-background) !important;
 }
 .button.warning {
   background: var(--button-warning-background);
-  border-color: var(--button-warning-border);
+  border: var(--button-warning-border);
   color: var(--button-warning-color);
 }
 .button.warning:hover {
-  background-color: var(--button-warning-hover-background);
-  border-color: var(--button-warning-hover-background);
+  background: var(--button-warning-hover-background);
+  border: var(--button-warning-hover-background);
 }
 .button.warning:active {
-  background-color: var(--button-warning-active-background);
-  border-color: var(--button-warning-active-background);
+  background: var(--button-warning-active-background);
+  border: var(--button-warning-active-background);
 }
 .button.warning.outline {
   color: var(--button-warning-background);
 }
 .button.warning.outline:active {
-  background-color: var(--button-warning-outline-active-background) !important;
+  background: var(--button-warning-outline-active-background) !important;
 }
 .button.link {
   background: var(--button-link-background);
-  border-color: var(--button-link-border);
+  border: var(--button-link-border);
   color: var(--button-link-color);
 }
 .button.link:hover {
-  background-color: var(--button-link-hover-background);
+  background: var(--button-link-hover-background);
   text-decoration: underline;
 }
 .button.outline {
-  background-color: initial;
+  background: initial;
 }
 .button.outline:hover {
-  background-color: initial;
+  background: initial;
 }
 
 :root {
@@ -724,17 +724,17 @@ h3 {
 }
 
 .popup > .scroller > div[role=group] > .item[data-type=normal]:hover {
-  color: #fff;
-  background: #5c6fb1;
+  color: var(--text-strong);
+  background: var(--primary);
   cursor: pointer;
 }
 
 .popup > .scroller > div[role=group] > .item[data-type=slider]:hover {
-  color: #fff;
+  color: var(--text-strong);
 }
 
 .popup > .scroller > div[role=group] > .item > .label {
-  color: #b9bbbe;
+  color: var(--text-default);
 }
 
 /* Slider */
