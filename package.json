@@ -5,8 +5,21 @@
 	"scripts": {
 		"scss": "sass scss/:css --watch"
 	},
-	"author": "",
-	"license": "ISC",
+	"repository": {
+		"url": "http://github.com/fosscord/fosscord-ui"
+	},
+	"bugs": {
+		"url": "https://github.com/fosscord/fosscord-ui/issues"
+	},
+	"homepage": "https://ui.fosscord.com/",
+	"keywords": [
+		"discord",
+		"fosscord",
+		"discord open source",
+		"ui-framework"
+	],
+	"author": "Fosscord",
+	"license": "MIT",
 	"devDependencies": {
 		"sass": "^1.32.8"
 	}
